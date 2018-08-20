@@ -43,10 +43,10 @@ h4 {
     background-image: linear-gradient(to top, #ff9671, #ffa16b, #ffad65, #ffba61, #ffc75f);
     height: 30px;
     /* Below is what makes it fixed to the bottom when there is no content above it */
-    position: absolute;
+    /* position: absolute;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0; */
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -56,10 +56,53 @@ a:link, a:visited, a:hover, a:active {
 }
 /* https://www.w3schools.com/html/html_links.asp */
 
-.topicsHome-container {
-    color: red;
+.topics-container, .navigation-container {
+    margin: 0.5%;
+}
+
+.navigation-container {
+    border: 2px solid #DFE0DF;
 }
 
 .topics-container {
-    color: green;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.navigation-container {
+    padding: 1.5%;
+}
+
+.navigation-items-padding {
+    padding: 0% 2% 0% 2%;
+}
+
+.navigation-items {
+    display: inline;
+    font-size: 1.5em;
+}
+
+.topicsHome-flex-item, .topics-flex-item, .navigation-container {
+    color: #524439;
+}
+
+.topicsHome-flex-item, .topics-flex-item {
+    background: #FFF7EB;
+}
+
+.topicsHome-flex-item {
+    padding: 5px;
+    width: 45%;
+    height: 150px;
+    margin: 10px;
+    line-height: 150px;
+    font-size: 3em;
+}
+
+.topics-flex-item {
+
 }

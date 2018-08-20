@@ -18,10 +18,10 @@ const Footer = () => {
                 &nbsp; with &nbsp;
                 <FontAwesomeIcon icon={["fab", "aws"]} size="lg" />
                 &nbsp; | &nbsp;
-                <a href="https://github.com/refayathaque/aws-developer-associate" target="_blank">
+                <a href="https://github.com/refayathaque/aws-developer-associate" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={["fab", "github"]} size="lg" />
                 </a>
-
+                {/* For rel="noopener noreferrer" above - https://github.com/asciidoctor/asciidoctor/issues/2071 */}
             </h4>
         </div>
     )

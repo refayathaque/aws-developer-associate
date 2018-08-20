@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom'
+// https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
 
 import '../styles.css';
 
