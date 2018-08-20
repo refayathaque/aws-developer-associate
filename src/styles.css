@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 100%;
+    /* 1em = 12pt = 16px = 100% */
+}
+
+/* The “em” is a scalable unit that is used in web document media. An em is equal to the current font-size, for instance, if the font-size of the document is 12pt, 1em is equal to 12pt. Ems are scalable in nature, so 2em would equal 24pt, .5em would equal 6pt, etc. Ems are becoming increasingly popular in web documents due to scalability and their mobile-device-friendly nature. */
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.container {
+    text-align: center;
+}
+
+.header-container, .footer-container {
+    color: white;
+    padding: 40px;
+}
+
+.header-container {
+    background-image: linear-gradient(to bottom, #ff9671, #ffa16b, #ffad65, #ffba61, #ffc75f);
+    /* https://mycolor.space/gradient?ori=to+bottom&hex=%23FF9671&hex2=%23FFC75F&sub=1 */
+    height: 130px;
+}
+
+.footer-container {
+    background-image: linear-gradient(to top, #ff9671, #ffa16b, #ffad65, #ffba61, #ffc75f);
+    height: 60px;
+}
