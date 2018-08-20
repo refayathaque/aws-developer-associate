@@ -20,6 +20,9 @@ h2 {
 h3 {
     font-size: 1.5em;
 }
+h4 {
+    font-size: 1.25em;
+}
 
 .container {
     text-align: center;
@@ -33,10 +36,22 @@ h3 {
 .header-container {
     background-image: linear-gradient(to bottom, #ff9671, #ffa16b, #ffad65, #ffba61, #ffc75f);
     /* https://mycolor.space/gradient?ori=to+bottom&hex=%23FF9671&hex2=%23FFC75F&sub=1 */
-    height: 130px;
+    height: 120px;
 }
 
 .footer-container {
     background-image: linear-gradient(to top, #ff9671, #ffa16b, #ffad65, #ffba61, #ffc75f);
-    height: 60px;
+    height: 30px;
+    /* Below is what makes it fixed to the bottom when there is no content above it */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
+
+a:link, a:visited, a:hover, a:active {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+}
+/* https://www.w3schools.com/html/html_links.asp */
