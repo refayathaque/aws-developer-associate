@@ -55,3 +55,11 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 /* https://www.w3schools.com/html/html_links.asp */
+
+.topicsHome-container {
+    color: red;
+}
+
+.topics-container {
+    color: green;
+}
