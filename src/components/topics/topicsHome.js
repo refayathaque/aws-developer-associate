@@ -10,7 +10,11 @@ const TopicsHome = () => {
                 <h3>Identity Access Management</h3>
                 <h4><i>Manage users and their level of access</i></h4>
             </div>
-            <div class="topicsHome-flex-item">2</div>
+            <div class="topicsHome-flex-item">
+                <h2>EC2</h2>
+                <h3>Elastic Compute Cloud</h3>
+                <h4><i>Resizeable virtual machine in the cloud</i></h4>
+            </div>
             <div class="topicsHome-flex-item">3</div>
             <div class="topicsHome-flex-item">4</div>
             <div class="topicsHome-flex-item">5</div>

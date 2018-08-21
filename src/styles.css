@@ -126,7 +126,8 @@ li {
 }
 
 .correct-answer {
-    color: #4C8C3C
+    color: #4C8C3C;
+    font-weight: bold;
 }
 
 .hr-style {
