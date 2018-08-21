@@ -100,7 +100,6 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .topicsHome-flex-item, .topics-flex-item-block, .topics-flex-item-inline, .topics-flex-item-inline-logo {
-    padding: 0.5%;
     margin: 10px;
 }
 
@@ -113,7 +112,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .topics-flex-item-block {
-    width: 97%;
+    width: 95.6%;
 }
 
 .topicsHome-flex-item, .topics-flex-item-inline, .topics-flex-item-inline-logo {
@@ -126,8 +125,8 @@ ul {
     list-style-position: inside;
 }
 
-li {
-    padding: 0.3%;
+li, .topicsHome-flex-item, .topics-flex-item-block, .topics-flex-item-inline, .topics-flex-item-inline-logo {
+    padding: 5px;
 }
 
 .correct-answer {
