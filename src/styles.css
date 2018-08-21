@@ -69,7 +69,7 @@ a:link, a:visited, a:hover, a:active {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     align-content: center;
 }
 
@@ -92,8 +92,15 @@ a:link, a:visited, a:hover, a:active {
 
 .topicsHome-flex-item, .topics-flex-item-block, .topics-flex-item-inline {
     background: #FFF7EB;
+}
+
+.topicsHome-flex-item, .topics-flex-item-block, .topics-flex-item-inline, .topics-flex-item-inline-logo {
     padding: 0.5%;
     margin: 10px;
+}
+
+.topics-flex-item-inline-logo {
+    background: white;
 }
 
 .topicsHome-flex-item {
@@ -104,7 +111,7 @@ a:link, a:visited, a:hover, a:active {
     width: 97%;
 }
 
-.topicsHome-flex-item, .topics-flex-item-inline {
+.topicsHome-flex-item, .topics-flex-item-inline, .topics-flex-item-inline-logo {
     width: 47%;
 }
 
