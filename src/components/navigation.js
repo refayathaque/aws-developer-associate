@@ -17,6 +17,7 @@ const Navigation = () => {
                 <Link className="navigation-items-padding" to='/ec2'>EC2</Link>
                 <Link className="navigation-items-padding" to='/ec2'>SNS</Link>
                 <Link className="navigation-items-padding" to='/ec2'>DynamoDB</Link>
+                <Link className="navigation-items-padding" to='/ec2'>VPC</Link>
             </div>
 
         </div>
