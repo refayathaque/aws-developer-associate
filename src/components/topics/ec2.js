@@ -45,6 +45,14 @@ const EC2 = () => {
                     <li>Scheduled RIs - Can launch within the time window we reserve, allows us to match capacity reservation to predicatibale recurring schedule that may only require compute for a fraction of a day/week/month at a time (e.g., month-end sale on the last Friday)</li>
                 </ul>
             </div>
+            <div className="topics-flex-item-inline">
+                <h3>Spot Instances</h3>
+                <ul>
+                    <li>Apps that have flexible start and end times</li>
+                    <li>Apps that are only feasible at very low compute prices, e.g., big pharmaceutical, chemical, and genomics (genome) companies will use this to do large-scale computing at, for example, 4am on a Sunday morning</li>
+                    <li>Those with an urgent need for large amounts of additional compute capacity</li>
+                </ul>
+            </div>
         </div>
     )
 }
