@@ -86,23 +86,33 @@ a:link, a:visited, a:hover, a:active {
     font-size: 1.5em;
 }
 
-.topicsHome-flex-item, .topics-flex-item, .navigation-container {
+.topicsHome-flex-item, .topics-flex-item-inline, .topics-flex-item-block, .navigation-container {
     color: #524439;
 }
 
-.topicsHome-flex-item, .topics-flex-item {
+.topicsHome-flex-item, .topics-flex-item-block, .topics-flex-item-inline {
     background: #FFF7EB;
+    padding: 0.5%;
+    margin: 10px;
 }
 
 .topicsHome-flex-item {
-    padding: 5px;
-    width: 45%;
+    width: 47%;
     height: 150px;
-    margin: 10px;
-    line-height: 150px;
-    font-size: 3em;
 }
 
-.topics-flex-item {
+.topics-flex-item-block {
+    width: 97%;
+}
 
+.topics-flex-item-inline {
+    width: 47%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 0.25%;
 }
