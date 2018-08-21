@@ -97,7 +97,6 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .topicsHome-flex-item {
-    width: 47%;
     height: 150px;
 }
 
@@ -105,14 +104,16 @@ a:link, a:visited, a:hover, a:active {
     width: 97%;
 }
 
-.topics-flex-item-inline {
+.topicsHome-flex-item, .topics-flex-item-inline {
     width: 47%;
 }
 
 ul {
-    list-style: none;
+    padding: 1% 0% 1% 0%;
+    list-style: disc;
+    list-style-position: inside;
 }
 
 li {
-    padding: 0.25%;
+    padding: 0.3%;
 }
