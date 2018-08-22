@@ -8,7 +8,7 @@ const ACLOUDGURU = () => {
     return (
         <div className='topics-container'>
             <div className="topics-flex-item-inline-logo">
-                <img src={logo}></img>
+                <img src={logo} alt="A Cloud Guru Logo"></img>
             </div>
             <div className="topics-flex-item-inline">
                 <h1>AWS Certified</h1>

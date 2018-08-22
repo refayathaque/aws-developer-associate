@@ -110,7 +110,7 @@ const IAM = () => {
                 </ul>
             </div>
             <div className="topics-flex-item-inline-logo">
-                <img src={logo}></img>
+                <img src={logo} alt="IAM Logo"></img>
             </div>
         </div>
     )
