@@ -18,7 +18,7 @@ const Navigation = () => {
                 <NavLink className="navigation-items" to='/acloudguru' activeStyle={{color:'#ff9671'}}>A Cloud Guru</NavLink>
                 <NavLink className="navigation-items" to='/iam' activeStyle={{color:'#ff9671'}}>IAM</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>EC2</NavLink>
-                <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>ELB</NavLink>
+                <NavLink className="navigation-items" to='/elb' activeStyle={{color:'#ff9671'}}>ELB</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>RDS</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>Elasticache</NavLink>
                 <NavLink className="navigation-items" to='/iam' activeStyle={{color:'#ff9671'}}>S3</NavLink>

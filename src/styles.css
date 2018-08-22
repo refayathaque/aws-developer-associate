@@ -88,11 +88,14 @@ a:link, a:visited, a:hover, a:active {
 
 .navigation-items-container {
     font-size: 1.5em;
-    text-align: left;
 }
 
 .topicsHome-flex-item, .topics-flex-item-inline, .topics-flex-item-block, .navigation-container {
     color: #524439;
+}
+
+.topicsHome-flex-item, .topics-flex-item-block, .topics-flex-item-inline, .navigation-items-container {
+    text-align: left;
 }
 
 .topicsHome-flex-item, .topics-flex-item-block, .topics-flex-item-inline {
@@ -120,9 +123,8 @@ a:link, a:visited, a:hover, a:active {
 }
 
 ul {
-    padding: 1% 0% 1% 0%;
+    padding: 10px 30px 15px 30px;
     list-style: disc;
-    list-style-position: inside;
 }
 
 li, .topicsHome-flex-item, .topics-flex-item-block, .topics-flex-item-inline, .topics-flex-item-inline-logo {
@@ -147,3 +149,8 @@ li, .topicsHome-flex-item, .topics-flex-item-block, .topics-flex-item-inline, .t
 .active {
     color: #ff9671;
 }
+
+.topics-flex-item-inline > h2, h3, .topics-flex-item-block > h2 {
+    padding-left: 13px;
+}
+/* https://www.w3schools.com/css/css_combinators.asp */

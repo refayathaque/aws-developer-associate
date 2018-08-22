@@ -91,6 +91,21 @@ const EC2 = () => {
             <div className="topics-flex-item-inline-logo">
                 <img src={logoebs} alt="EBS Logo"></img>
             </div>
+            <div className="topics-flex-item-inline">
+                <h2>CLI - Command Line Interface</h2>
+                <ul>
+                    <li>Secret access key - We only see this once in the console - If it isn't saved we have to delete the key pair (access key id and secret access key) and regenrate it - After regenerating we'll have to run 'aws configure' in the CLI again and insert the new key pair</li>
+                    <li>Do not use just one access key - Do not have <i>one</i> key and share with all your team members - In case someone leaves unamicably then you will need to delete the key pair and <i>create a new one for every single person on your team, and they would all need to update their CLIs</i> - <stong>Create one key pair per team member</stong></li>
+                    <li><strong>Do not save the key pair in any of your code, because you do not want to accidentally push this information to public repositories - Anyone can get the same access you have as a user to the AWS environment if they just have your key pair</strong></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Reminders on IAM</h2>
+                <ul>
+                    <li>Least privilege - Always give your users the <strong>minimum</strong> level of access required - E.g., user may only need admin access over S3, in which case do not give them full admin access to the console, only give them admin access to S3</li>
+                    <li>Create groups - Assign your users to groups - Your users will automatically inherit the permissions of the group and the group's permissions are set using policy documents</li>
+                </ul>
+            </div>
         </div>
     )
 

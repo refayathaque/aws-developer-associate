@@ -15,7 +15,11 @@ const TopicsHome = () => {
                 <h3>Elastic Compute Cloud</h3>
                 <h4><i>Resizeable virtual machine in the cloud</i></h4>
             </div>
-            <div class="topicsHome-flex-item">3</div>
+            <div class="topicsHome-flex-item">
+                <h2>ELB</h2>
+                <h3>Elastic Load Balancer</h3>
+                <h4><i>Balance load across multiple different servers</i></h4>
+            </div>
             <div class="topicsHome-flex-item">4</div>
             <div class="topicsHome-flex-item">5</div>
             <div class="topicsHome-flex-item">6</div>
