@@ -22,7 +22,7 @@ const Navigation = () => {
                 <NavLink className="navigation-items" to='/rds' activeStyle={{color:'#ff9671'}}>RDS</NavLink>
                 <NavLink className="navigation-items" to='/elasticache' activeStyle={{color:'#ff9671'}}>Elasticache</NavLink>
                 <NavLink className="navigation-items" to='/s3' activeStyle={{color:'#ff9671'}}>S3</NavLink>
-                <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>CloudFront</NavLink>
+                <NavLink className="navigation-items" to='/cloudfront' activeStyle={{color:'#ff9671'}}>CloudFront</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>Lambda</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>APIGateway</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>Step Functions</NavLink>

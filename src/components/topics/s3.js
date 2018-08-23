@@ -112,6 +112,16 @@ const S3 = () => {
                     <li>Two options are available: <strong>x-amz-server-side-encryption: AES256</strong> (SSE-S3, S3 Managed Keys) and <strong>x-amz-server-side-encryption: ams:kms</strong> (SSE-KMS, KMS Managed Keys)</li>
                     <li>When this parameter is included in the header of the PUT request, it tells S3 to encrypt the object at the time of upload, using the specified encryption method</li>
                     <li>You can enforce the use of Server Side Encryption by using a bucket policy that denies any S3 PUT request which doesn't include the <strong>x-amz-server-side-encryption</strong> parameter in the request header</li>
+                    <li>When doing ^ you may get an error - <i>Action does not apply to any resource(s) in statement</i> - To rectify, add a wild card (/*) to the end of your resource in the policy</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>CORS</h2>
+                <ul>
+                    <li><i>Cross Origin Resource Sharing></i></li>
+                    <li>Allowing code that is in one S3 bucket to access/reference code in another S3 bucket</li>
+                    <li>CORS must be enabled from the bucket that is <strong>being called</strong></li>
+                    <li>Use website endpoint (properties -> static website hosting) URL when setting up CORS, <i>not the regular S3 URL used to access files</i></li>
                 </ul>
             </div>
         </div>

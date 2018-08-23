@@ -34,7 +34,10 @@ const TopicsHome = () => {
                 <h3>Simple Storage Service</h3>
                 <h4>Secure, highly-scalable object storage</h4>
             </div>
-            <div class="topicsHome-flex-item">1</div>
+            <div class="topicsHome-flex-item">
+                <h2>CloudFront</h2>
+                <h4><i></i></h4>
+            </div>
             <div class="topicsHome-flex-item">2</div>
             <div class="topicsHome-flex-item">3</div>
             <div class="topicsHome-flex-item">4</div>
