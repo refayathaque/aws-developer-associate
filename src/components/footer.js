@@ -13,11 +13,11 @@ const Footer = () => {
                 <FontAwesomeIcon icon={["fab", "js"]} size="lg" />
                 &nbsp; and &nbsp;
                 <FontAwesomeIcon icon={["fab", "react"]} size="lg" />
-                &nbsp; Hosted in the &nbsp;
+                &nbsp; -&nbsp; Hosted in the &nbsp;
                 <FontAwesomeIcon icon={["fas", "cloud"]} />
                 &nbsp; with &nbsp;
                 <FontAwesomeIcon icon={["fab", "aws"]} size="lg" />
-                &nbsp; | &nbsp;
+                &nbsp; - &nbsp;Codebase in &nbsp;
                 <a href="https://github.com/refayathaque/aws-developer-associate" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={["fab", "github"]} size="lg" />
                 </a>

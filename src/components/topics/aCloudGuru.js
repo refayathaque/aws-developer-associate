@@ -21,7 +21,7 @@ const ACLOUDGURU = () => {
                     <br></br>
                     <hr className="hr-style"></hr>
                     <br></br>
-                    <h3><li>...It's really hard to believe that a USD 10 course from Udemy has allowed me to, most importanly, study for the exam and enhance my marketability as a cloud engineer, and put together this comprehensive study guide for you!</li></h3>
+                    <h3><li>...It's really hard to believe that a USD 10 course from Udemy has allowed me to, most importantly, study for the exam and enhance my marketability as a cloud engineer, and put together this comprehensive study guide for you!</li></h3>
                     <h3><li>I hope this is helpful in preparing for your certification...</li></h3>
                 </ul>
             </div>

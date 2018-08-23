@@ -36,6 +36,7 @@ const ELB = () => {
             <div className="topics-flex-item-inline">
                 <h2>Classic Load Balancer</h2>
                 <ul>
+                    <li><strong>Could be reffered to in exam as 'Elastic Load Balancer'</strong></li>
                     <li><i>Legacy</i></li>
                     <li>Can load balance HTTP/HTTPS apps</li>
                     <li>Can use Layer 7-specific features like <strong>X-Forwarded</strong> and <strong>sticky sessions</strong></li>

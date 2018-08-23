@@ -97,6 +97,7 @@ const EC2 = () => {
                     <li>Secret access key - We only see this once in the console - If it isn't saved we have to delete the key pair (access key id and secret access key) and regenrate it - After regenerating we'll have to run 'aws configure' in the CLI again and insert the new key pair</li>
                     <li>Do not use just one access key - Do not have <i>one</i> key and share with all your team members - In case someone leaves unamicably then you will need to delete the key pair and <i>create a new one for every single person on your team, and they would all need to update their CLIs</i> - <stong>Create one key pair per team member</stong></li>
                     <li><strong>Do not save the key pair in any of your code, because you do not want to accidentally push this information to public repositories - Anyone can get the same access you have as a user to the AWS environment if they just have your key pair</strong></li>
+                    <li><strong>Default region of an SDK is \"US-EAST-1\"</strong></li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
@@ -117,6 +118,81 @@ const EC2 = () => {
                     <li>We can change a policy on a role and it will og into effect immediately - E.g., if you later decide that whomever is using the EC2 instance should <strong>only be able to read from S3</strong>, as opposed to read/write/delete, you can change the policy in the role and it will go into effect immediately</li>
                     <li>We can attach and detach roles to <i>running instances</i> without needing to stop/terminate</li>
                     <li><i>If your EC2 instance does not have the user's key pair in the credentials file, but the instance was given a role (in the console) which allows it full access to another service like S3, then you can in fact access content in S3 from the instance - If the instance has the S3 access role but also has a <strong>deleted key pair</strong> then EC2 cannot access S3, the deleted key pair-associated credential and config files must be removed from the EC2 for it to access S3</i></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-block">
+                <h2>Quiz Questions</h2>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>A HTTP 4XX code means ____</h3>
+                <ul>
+                    <li>There has been a server side error</li>
+                    <li>There has been a redirection</li>
+                    <li>The request was succesful</li>
+                    <li className="correct-answer">There has been a client side error</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>To retrieve Metadata or Userdata, you will need to use which of the following IP addresses?</h3>
+                <ul>
+                    <li>http://127.0.0.1</li>
+                    <li className="correct-answer">http://169.254.169.254</li>
+                    <li>http://10.0.0.1</li>
+                    <li>http://192.168.0.254</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which AWS service below is chargeable?</h3>
+                <ul>
+                    <li className="correct-answer">Elastic Load Balancers</li>
+                    <li>Cloud Formation</li>
+                    <li>Elastic Beanstalk</li>
+                    <li>Autoscaling</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which of the following best describes Amazon ECS?</h3>
+                <ul>
+                    <li>The Elastic Container Scheduler is software that you can run and manage to orchestrate many running Docker containers</li>
+                    <li>The Elastic Container Schedule is a service that manages running Docker containers on a group of your EC2 instances</li>
+                    <li className="correct-answer">The Elastic Container Service is software that you can run and manage to orchestrate many running Docker containers</li>
+                    <li>The Elastic Container Scheduler is a serverless system to manage running many Docker containers in a flexible and cost-effective way</li>
+                    <li>The Elastic Container Service is a serverless system to manage running many Docker containers in a flexible and cost-effective way</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Individual instances are provisioned ____</h3>
+                <ul>
+                    <li>In regions</li>
+                    <li>Globally</li>
+                    <li className="correct-answer">In Availability Zones (AZs)</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>You work for a media production company that streams popular TV shows to millions of users. They are migrating their web application from an in house solution to AWS. They will have a fleet of over 10,000 webservers to meet the demand and will need a reliable layer 4 load balancing solution capable of handling millions of requests per second. What AWS load balancing solution would be suit their needs?</h3>
+                <ul>
+                    <li>Application Load Balancer</li>
+                    <li>Elastic Load Balancer</li>
+                    <li className="correct-answer">Network Load Balancer</li>
+                    <li>AWS Direct Connect</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>An new CIO joins your company and implements a new company policy that all EC2 instances must have encryption at rest. What is the quickest and easiest way to apply this policy to your existing EC2 instances?</h3>
+                <ul>
+                    <li>In the AWS console, click on the EC2 instances, click actions and click encrypt EBS volumes</li>
+                    <li>Create an encrypted snapshot of the EC2 volume using the ecrypt on the fly option. Create an AMI of the copied snapshot and then redeploy the EC2 instance using the encrypted AMI. Delete the old EC2 instance</li>
+                    <li className="correct-answer">Create a snapshot of the EC2 volume. Then create a copy of that volume, checking the box to enable encryption. Create an AMI of the copied snapshot and then redeploy the EC2 instance using the encrypted AMI. Delete the old EC2 instance</li>
+                    <li>Create an encrypted AMI of the EC2 volume using Windows Bitlocker</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>You run the internal intranet for a corporate bank. The intranet consists of a number of webservers and single relational database running Microsoft SQL Server. Your peak demand occurs at 9am every week morning when users are first logging in to the intranet. They can only log in using the company's internal network and it is not possible to access the intranet from any location other than within the office building for security purposes. Management is considering a change and to move this enironment to AWS where users will be able to access the intranet via a software VPN. You have been asked to evaluate a migration to AWS and to identify the best EC2 billing model for your company's intranet. You must keep costs low and to be able to scale at particular times of day. You must maintain availabilty of the intranet throughout office hours. Management do not want to be locked in to any contracts in case for some reason they want to go back to hosting internally. What EC2 billing model should you recommend?</h3>
+                <ul>
+                    <li>Reserved Instances</li>
+                    <li>Dedicated Instances</li>
+                    <li className="correct-answer">On-demand</li>
+                    <li>Spot Instances</li>
                 </ul>
             </div>
         </div>

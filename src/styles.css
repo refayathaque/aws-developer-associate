@@ -94,7 +94,7 @@ a:link, a:visited, a:hover, a:active {
     color: #524439;
 }
 
-.topicsHome-flex-item, .topics-flex-item-block, .topics-flex-item-inline, .navigation-items-container {
+.topics-flex-item-block, .topics-flex-item-inline, .navigation-items-container {
     text-align: left;
 }
 
