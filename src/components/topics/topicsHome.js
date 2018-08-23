@@ -22,8 +22,8 @@ const TopicsHome = () => {
             </div>
             <div class="topicsHome-flex-item">
                 <h2>RDS</h2>
-                <h3></h3>
-                <h4><i></i></h4>
+                <h3>Relational Database Service</h3>
+                <h4><i>Akin to spreadsheets with rows and fields (columns)</i></h4>
             </div>
             <div class="topicsHome-flex-item">5</div>
             <div class="topicsHome-flex-item">6</div>
