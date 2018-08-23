@@ -103,7 +103,20 @@ const EC2 = () => {
                 <h2>Reminders on IAM</h2>
                 <ul>
                     <li>Least privilege - Always give your users the <strong>minimum</strong> level of access required - E.g., user may only need admin access over S3, in which case do not give them full admin access to the console, only give them admin access to S3</li>
+                    <li><i>^ Applies to resources as well</i> - E.g., when setting roles for resources like EC2, do not give it the full 'AdministratorAccess' because if the instance is compromised in any way then the malicious actor has access to <strong>all other AWS services</strong> from the instance</li>
                     <li>Create groups - Assign your users to groups - Your users will automatically inherit the permissions of the group and the group's permissions are set using policy documents</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Reminders on EC2/IAM</h2>
+                <ul>
+                    <li>Roles allow you to not use access key ids and secret access keys</li>
+                    <li>Roles are preferred from a <strong>security perspective</strong></li>
+                    <li>#RolesOverAccessKeys</li>
+                    <li>Roles are controlled by policies</li>
+                    <li>We can change a policy on a role and it will og into effect immediately - E.g., if you later decide that whomever is using the EC2 instance should <strong>only be able to read from S3</strong>, as opposed to read/write/delete, you can change the policy in the role and it will go into effect immediately</li>
+                    <li>We can attach and detach roles to <i>running instances</i> without needing to stop/terminate</li>
+                    <li><i>If your EC2 instance does not have the user's key pair in the credentials file, but the instance was given a role (in the console) which allows it full access to another service like S3, then you can in fact access content in S3 from the instance - If the instance has the S3 access role but also has a <strong>deleted key pair</strong> then EC2 cannot access S3, the deleted key pair-associated credential and config files must be removed from the EC2 for it to access S3</i></li>
                 </ul>
             </div>
         </div>

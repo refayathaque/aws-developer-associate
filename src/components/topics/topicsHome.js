@@ -20,7 +20,11 @@ const TopicsHome = () => {
                 <h3>Elastic Load Balancer</h3>
                 <h4><i>Balance load across multiple different servers</i></h4>
             </div>
-            <div class="topicsHome-flex-item">4</div>
+            <div class="topicsHome-flex-item">
+                <h2>RDS</h2>
+                <h3></h3>
+                <h4><i></i></h4>
+            </div>
             <div class="topicsHome-flex-item">5</div>
             <div class="topicsHome-flex-item">6</div>
             <div class="topicsHome-flex-item">1</div>
