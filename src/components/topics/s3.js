@@ -70,10 +70,10 @@ const S3 = () => {
                 <h2>Storage Tiers/Classes</h2>
                 <ul>
                     <li>S3 - 99.99% availability, 99.99999999999% (11 9s) durability, stored redundantly across multiple facilities, and is designed to sustain the loss of 2 facilities concurrently - For frequently accessed objects</li>
-                    <li>S3 IA - Infrequently Accessed - For data that is accessed less frequently, but requires rapid access when needed - Unlike ^ availability is 99.9% but durability the same - Cheaper than ^ S3, but we get charged a retrieval fee</li>
-                    <li>S3 One Zone IA - Same as ^ IA but data is stored in a <strong>single AZ only</strong> - Still 99.99999999999% (11 9s) durability, but only 99.5% availability - 20% cheaper than S3 IA</li>
+                    <li>S3 IA - Infrequently Accessed - For data that is accessed less frequently, but requires rapid access when needed - Unlike ^ S3, availability is 99.9%, but like ^ S3 durability is 99.99999999999% (11 9s)  - Cheaper than ^ S3, but we get charged a retrieval fee</li>
+                    <li>S3 One Zone IA - Similar to ^ S3 IA but data is stored in a <strong>single AZ only</strong> - Unlike ^ S3 IA, availability is 99.5%, but like ^ S3 IA durability is 99.99999999999% (11 9s) - 20% cheaper than S3 IA</li>
                     <li>Reduced Redundancy Storage - Designed to provide 99.99% durability and 99.99% availability of objects over a give year - Used for data that can be recreated if lost, e.g., thumbnails - (<i>Starting to disappear from AWS documentation but could be in the exam</i>)</li>
-                    <li>Glacier - Very cheap - Used for archival only - Optimized for data that is infrequently accessed - Takes 3 to 5 hours to restore - Has same durability and availability (<strong>after objects are restored</strong>) % as stanard S3</li>
+                    <li>Glacier - Very cheap - Used for archival only - Optimized for data that is infrequently accessed - Takes 3 to 5 hours to restore - Has same durability and availability (<strong>after objects are restored</strong>) %s as standard S3</li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
@@ -84,6 +84,34 @@ const S3 = () => {
                     <li>Storage management pricing - E.g., inventory/analytics/object tags</li>
                     <li>Data management pricing - We have to pay for transferring data out of S3, e.g., if we download a file from S3</li>
                     <li>Transfer acceleration - Uses CloudFront to optimize transfers, makes uploads faster</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Security</h2>
+                <ul>
+                    <li>By default, all newly created buckets are <strong>private</strong></li>
+                    <li>We can set up access control to buckets using bucket policies and access control lists</li>
+                    <li>Bucket Policies - <strong>Applied at a bucket level</strong></li>
+                    <li>Access Control Lists - <strong>Applied at an object level</strong> - Fine-grained access control</li>
+                    <li>Buckets can be configured to create access logs, which log all requests made to the bucket - These logs can be written to another bucket</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Encryption</h2>
+                <ul>
+                    <li>In Transit - SSL/TLS (HTTPS), e.g., when uploading/downloading files</li>
+                    <li>At Rest - Server Side Encryption (SSE): S3 Managed Keys (<strong>SSE-S3</strong>), AWS Key Management Service Managed Keys (<strong>SSE-KMS</strong>), Server Side Encryption with Customer Provided Keys (<strong>SSE-C</strong>)</li>
+                    <li>Client Side Encryption</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Enforcing Encryption on Buckets</h2>
+                <ul>
+                    <li>Every time a file is uploaded to S3, a PUT request is initiated, and the request has a header with important information</li>
+                    <li>If the file is to be encrypted at upload time, the <strong>x-amz-server-side-encryption</strong> parameter will be in the request header</li>
+                    <li>Two options are available: <strong>x-amz-server-side-encryption: AES256</strong> (SSE-S3, S3 Managed Keys) and <strong>x-amz-server-side-encryption: ams:kms</strong> (SSE-KMS, KMS Managed Keys)</li>
+                    <li>When this parameter is included in the header of the PUT request, it tells S3 to encrypt the object at the time of upload, using the specified encryption method</li>
+                    <li>You can enforce the use of Server Side Encryption by using a bucket policy that denies any S3 PUT request which doesn't include the <strong>x-amz-server-side-encryption</strong> parameter in the request header</li>
                 </ul>
             </div>
         </div>
