@@ -19,3 +19,8 @@
         <li></li>
     </ul>
 </div>
+
+// Image
+<div className="topics-flex-item-inline-logo">
+    <img src={logo} alt="A Cloud Guru Logo"></img>
+</div>

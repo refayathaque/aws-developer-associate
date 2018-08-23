@@ -32,6 +32,7 @@ const RDS = () => {
                 <ul>
                     <li>OLTP - Online Transaction Processing</li>
                     <li>OLAP - Online Analytics Processing</li>
+                    <li>AWS OLAP - RedShift</li>
                     <li>Difference lies with the <i>types of queries</i> being run</li>
                     <li>OLTP - E.g., an online store's customer service representative pulls up order details by the order number, so using the order number a row of data is extracted that has things like the customer's name, date of purchase, address delivered to, delivery status, etc. - Data is simple - Data accessed <strong>frequently</strong></li>
                     <li>OLAP - E.g., a manufacturing company trying to figure out the net profit for two regions, which will require huge numbers of records for a plethora of different things such as number of items sold in both regions, unit cost in each region, sales price in each region, etc. - After the necessary data is extracted complex calculations must be done to determine the net profit (profit = revenue - cost, foreign currency conversions, and other mathematical processes) - Data is complex - Data accessed <strong>infrequently</strong></li>

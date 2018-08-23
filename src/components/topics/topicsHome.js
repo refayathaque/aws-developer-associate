@@ -25,7 +25,10 @@ const TopicsHome = () => {
                 <h3>Relational Database Service</h3>
                 <h4><i>Akin to spreadsheets with rows and fields (columns)</i></h4>
             </div>
-            <div class="topicsHome-flex-item">5</div>
+            <div class="topicsHome-flex-item">
+                <h2>Elasticache</h2>
+                <h4><i>Quickly pull data from in-memory caches</i></h4>
+            </div>
             <div class="topicsHome-flex-item">6</div>
             <div class="topicsHome-flex-item">1</div>
             <div class="topicsHome-flex-item">2</div>
