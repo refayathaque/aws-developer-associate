@@ -29,7 +29,11 @@ const TopicsHome = () => {
                 <h2>Elasticache</h2>
                 <h4><i>Quickly pull data from in-memory caches</i></h4>
             </div>
-            <div class="topicsHome-flex-item">6</div>
+            <div class="topicsHome-flex-item">
+                <h2>S3</h2>
+                <h3>Simple Storage Service</h3>
+                <h4>Secure, highly-scalable object storage</h4>
+            </div>
             <div class="topicsHome-flex-item">1</div>
             <div class="topicsHome-flex-item">2</div>
             <div class="topicsHome-flex-item">3</div>
