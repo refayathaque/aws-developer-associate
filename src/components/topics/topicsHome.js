@@ -38,8 +38,14 @@ const TopicsHome = () => {
                 <h2>CloudFront</h2>
                 <h4><i>Content Delivery Network (CDN)</i></h4>
             </div>
-            <div class="topicsHome-flex-item">2</div>
-            <div class="topicsHome-flex-item">3</div>
+            <div class="topicsHome-flex-item">
+                <h2>Lambda</h2>
+                <h4><i>Ultimate/latest abstraction layer</i></h4>
+            </div>
+            <div class="topicsHome-flex-item">
+                <h2>API Gateway</h2>
+                <h4><i></i></h4>
+            </div>
             <div class="topicsHome-flex-item">4</div>
             <div class="topicsHome-flex-item">5</div>
             <div class="topicsHome-flex-item">6</div>

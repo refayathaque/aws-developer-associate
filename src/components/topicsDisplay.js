@@ -6,9 +6,10 @@ import ACloudGuru from './topics/aCloudGuru.js';
 import ELB from './topics/elb.js';
 import RDS from './topics/rds.js';
 import S3 from './topics/s3.js';
-import CloudFront from './topics/cloudfront.js';
+import CloudFront from './topics/cloudFront.js';
 import Elasticache from './topics/elasticache.js';
-import Serverless from './topics/serverless.js';
+import Lambda from './topics/lambda.js';
+import APIGateway from './topics/apiGateway.js';
 import TopicsHome from './topics/topicsHome.js';
 
 import '../styles.css';
@@ -26,7 +27,8 @@ const TopicsDisplay = () => {
             <Route path='/elasticache' component={Elasticache}/>
             <Route path='/s3' component={S3}/>
             <Route path='/cloudfront' component={CloudFront}/>
-            <Route path='/serverless' component={Serverless}/>
+            <Route path='/lambda' component={Lambda}/>
+            <Route path='/apigateway' component={APIGateway}/>
         </Switch>
     )
 }

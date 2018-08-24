@@ -23,8 +23,8 @@ const Navigation = () => {
                 <NavLink className="navigation-items" to='/elasticache' activeStyle={{color:'#ff9671'}}>Elasticache</NavLink>
                 <NavLink className="navigation-items" to='/s3' activeStyle={{color:'#ff9671'}}>S3</NavLink>
                 <NavLink className="navigation-items" to='/cloudfront' activeStyle={{color:'#ff9671'}}>CloudFront</NavLink>
-                <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>Lambda</NavLink>
-                <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>APIGateway</NavLink>
+                <NavLink className="navigation-items" to='/lambda' activeStyle={{color:'#ff9671'}}>Lambda</NavLink>
+                <NavLink className="navigation-items" to='/apigateway' activeStyle={{color:'#ff9671'}}>APIGateway</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>Step Functions</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>X-Ray</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>DynamoDB</NavLink>
@@ -37,7 +37,7 @@ const Navigation = () => {
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>CodeDeploy</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>CodePipeline</NavLink>
                 <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>Developer Theory</NavLink>
-                <NavLink className="navigation-items" to='/serverless' activeStyle={{color:'#ff9671'}}>Serverless</NavLink>
+                <NavLink className="navigation-items" to='/lambda' activeStyle={{color:'#ff9671'}}>Serverless</NavLink>
 
                 {/* https://github.com/reactjs/react-router-tutorial/tree/master/lessons/05-active-links */}
             </div>
