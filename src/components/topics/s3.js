@@ -83,7 +83,7 @@ const S3 = () => {
                     <li># of requests (GET, PUT, COPY, etc.)</li>
                     <li>Storage management pricing - E.g., inventory/analytics/object tags</li>
                     <li>Data management pricing - We have to pay for transferring data out of S3, e.g., if we download a file from S3</li>
-                    <li>Transfer acceleration - Uses CloudFront to optimize transfers, makes uploads faster</li>
+                    <li>Transfer acceleration - Uses CloudFront to optimize transfers, makes <strong>uploads faster</strong></li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">

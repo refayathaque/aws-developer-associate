@@ -36,7 +36,7 @@ const TopicsHome = () => {
             </div>
             <div class="topicsHome-flex-item">
                 <h2>CloudFront</h2>
-                <h4><i></i></h4>
+                <h4><i>Content Delivery Network (CDN)</i></h4>
             </div>
             <div class="topicsHome-flex-item">2</div>
             <div class="topicsHome-flex-item">3</div>
