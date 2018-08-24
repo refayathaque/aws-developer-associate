@@ -68,6 +68,8 @@ const Lambda = () => {
                     <li>Continous Scaling - No need to configure Auto Scaling Groups like with EC2 - Scales out (not up) automatically, e.g., we can have millions of functions running parallelly</li>
                     <li>Super cheap</li>
                     <li>Amazon Echo works with Lambda - When we use Alexa we are speaking to AWS Lambda</li>
+                    <li>In the console we can see a list of AWS services/resouces the function has access to by virtue of the <strong>role</strong> assigned</li>
+                    <li>You can define Environment Variables as key-value pairs that are accessible from your function code - These are useful to store configuration settings without the need to change function code</li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline-logo">

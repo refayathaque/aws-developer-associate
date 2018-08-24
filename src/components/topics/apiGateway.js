@@ -23,6 +23,7 @@ const APIGateway = () => {
                     <li>Fully managed service making it easy for us to <strong>publish/manage/monitor/secure APIs at any scale</strong></li>
                     <li>We can create an API acting as a 'front door' for apps to access data, business logic, or functionality from our AWS back-end services such as apps running on EC2, or code running on Lambda</li>
                     <li>An end user will make a request to our AWS environment - The request is processed by API Gateway, then it can (based on the type of request) forward the request to other services/resources such as Lambda, EC2, or DynamoDB</li>
+                    <li>When creating a new API you can - Clone from existing API, <strong>import from Swagger</strong>, or use an example API</li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
@@ -84,6 +85,7 @@ const APIGateway = () => {
                     <li>When we see the error, <strong>"Origin policy cannot be read at the remote resource"</strong>, in out Chrome console, we need to <strong>enable CORS on API Gateway</strong></li>
                     <li><i>Personal anecdote - I had to enable this to have my S3+CloudFront deployed React application trigger a Lambda function through an API Gateway endpoint and return a status - I also got the error mentioned ^</i></li>
                     <li><strong>If you are using JavaScript/AJAX that uses multiple domains with API Gateway, ensure that you have enabled CORS on API Gateway</strong></li>
+                    <li><i>Enable if your API has to interact with S3</i></li>
                 </ul>
             </div>
         </div>
