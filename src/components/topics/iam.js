@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles.css';
 import logo from "../../images/SecurityIdentityCompliance_AWSIAM.jpg"
+import logoA from "../../images/SecurityIdentityCompliance_IAM_role.jpg"
 
 const IAM = () => {
 
@@ -25,19 +26,23 @@ const IAM = () => {
                 <ul>
                     <li>Users - End users (people)</li>
                     <li>Groups - Multiple users under one set of permissions</li>
-                    <li>Roles - Assigned to AWS resources (not people)</li>
+                    <li>Roles - <strong>Assigned to AWS resources (not people)</strong></li>
                     <li>Policy documents - Defines permission(s) and assigned to users/groups/roles, can be shared amongst users/groups/roles</li>
                 </ul>
             </div>
-            <div className="topics-flex-item-block">
+            <div className="topics-flex-item-inline-logo">
+                <img src={logoA} alt="IAM Role Logo"></img>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>The Basics</h2>
                 <ul>
                     <li>Universal - Does not apply to regions</li>
                     <li>Root Account - Created when we first setup account, has <strong>complete</strong> Admin access</li>
-                    <li>Do not use the root account for day-to-day activites, create users under groups and/or with specific policies</li>
+                    <li><strong>Do not use the root account for day-to-day activites</strong>, create users under groups and/or with specific policies</li>
                     <li>New users have <strong>no permissions</strong> when first created, we have to explicitly assign them</li>
                     <li>New users provided <strong>access key id and secret access keys</strong> when first created - for access via CLI and APIs</li>
                     <li>We only see the access key id and secret access key once, to see again you must regenerate in IAM console</li>
-                    <li>Always setup MFA on the root account</li>
+                    <li><i>Always setup MFA on the root account</i></li>
                     <li>We should set up and customize password rotation policies for all users</li>
                 </ul>
             </div>

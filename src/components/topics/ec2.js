@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles.css';
 import logoec2 from "../../images/Compute_AmazonEC2.jpg"
 import logoebs from "../../images/Storage_AmazonEBS.jpg"
+import logoiam from "../../images/SecurityIdentityCompliance_AWSIAM.jpg"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -107,6 +108,9 @@ const EC2 = () => {
                     <li><i>^ Applies to resources as well</i> - E.g., when setting roles for resources like EC2, do not give it the full 'AdministratorAccess' because if the instance is compromised in any way then the malicious actor has access to <strong>all other AWS services</strong> from the instance</li>
                     <li>Create groups - Assign your users to groups - Your users will automatically inherit the permissions of the group and the group's permissions are set using policy documents</li>
                 </ul>
+            </div>
+            <div className="topics-flex-item-inline-logo">
+                <img src={logoiam} alt="IAM Logo"></img>
             </div>
             <div className="topics-flex-item-inline">
                 <h2>Reminders on EC2/IAM</h2>

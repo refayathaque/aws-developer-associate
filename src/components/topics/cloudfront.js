@@ -31,12 +31,14 @@ const CloudFront = () => {
                     <li>Also works seamlessly with any <strong>non-AWS origin server</strong>, which stores the original, definitive versions of your files</li>
                     <li>Objects are <strong>cached for the life of the TTL (Time To Live)</strong></li>
                     <li>We can <strong>clear cached objects at any time, but we will be charged</strong> for it</li>
+                    <li>Clear cache by <strong>invalidating objects</strong> - Something we might have to do if we cannot wait for the TTL (Time To Live) to expire</li>
+                    <li>Geo-Restriction - Possible to whitelist/blacklist countries</li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
                 <h2>CloudFront and S3 Transfer Acceleration</h2>
                 <ul>
-                    <li>Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files <i>over long distances</i> between your end usrs and an S3 bucket - Reduced latency for S3 uploads</li>
+                    <li>Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files <i>over long distances</i> between your end users and an S3 bucket - Reduced latency for S3 uploads</li>
                     <li>Transfer Acceleration - Takes advantage of CloudFront's globally distributed edge locations - As the data arrives at an edge location, data is routed to S3 over an <strong>optimized network path</strong> (essentially these are fast networks <strong>within</strong> AWS)</li>
                 </ul>
             </div>

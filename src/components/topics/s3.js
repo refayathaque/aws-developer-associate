@@ -124,6 +124,23 @@ const S3 = () => {
                     <li>Use website endpoint (properties -> static website hosting) URL when setting up CORS, <i>not the regular S3 URL used to access files</i></li>
                 </ul>
             </div>
+            <div className="topics-flex-item-inline">
+                <h2>Performance Optimization</h2>
+                <ul>
+                    <li>S3 is designed to support very high request rates. However, if your S3 buckets are routinely getting over 100 PUT/LIST/DELETE requests per second, or over 300 GET requests per second, then there are some best practice guidlines for performance optimization</li>
+                    <li>GET-intensive workloads - CloudFront - As it will cache your most frequently access objects and will reduce latency</li>
+                    <li>Mixed Request Type Workloads - Avoid sequential key names for your S3 objects - Instead, add a random prefix like a hex hash to the key name to prevent multiple objects from being stored on the same partition</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Some Reminders</h2>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-block">
+                <h2>Quiz Questions</h2>
+            </div>
         </div>
     )
 
