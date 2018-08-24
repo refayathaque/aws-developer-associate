@@ -40,11 +40,11 @@ const TopicsHome = () => {
             </div>
             <div class="topicsHome-flex-item">
                 <h2>Lambda</h2>
-                <h4><i>Ultimate/latest abstraction layer</i></h4>
+                <h4><i>Ultimate/latest abstraction layer for compute</i></h4>
             </div>
             <div class="topicsHome-flex-item">
                 <h2>API Gateway</h2>
-                <h4><i></i></h4>
+                <h4><i>Publish/manage/monitor/secure APIs at any scale</i></h4>
             </div>
             <div class="topicsHome-flex-item">4</div>
             <div class="topicsHome-flex-item">5</div>
