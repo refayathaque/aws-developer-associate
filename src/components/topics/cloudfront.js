@@ -20,7 +20,7 @@ const CloudFront = () => {
                     <li>Origin - Of files the CDN will distribute, e.g., S3 bucket, EC2 instance, an Elastic Load Balancer (ELB), or Route53</li>
                     <li>Distribution - Name of the CDN, which consists of a collection of Edge Locations</li>
                     <li>Web Distribution - Typically used for websites, e.g., HTTP/HTTPS</li>
-                    <li>RTMP (Adobe Real-Time Messaging Protocol) - Used for media streaming and/or flash multi-media content - <i>Another type of distribution</i></li>
+                    <li>RTMP (Adobe Real-Time Messaging Protocol) Distribution - Used for media streaming and/or flash multi-media content</li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
@@ -29,9 +29,9 @@ const CloudFront = () => {
                     <li>Can be used to deliver our entire website, including dynamic, static, streaming, and interactive content using a global network of edge location</li>
                     <li>Requests for your content are <strong>automatically routed to the nearest edge location</strong>, so content is delivered with the best possible performance - E.g., can be used to optimize performance for users accessing a website backed by S3</li>
                     <li>Also works seamlessly with any <strong>non-AWS origin server</strong>, which stores the original, definitive versions of your files</li>
-                    <li>Objects are <strong>cached for the life of the TTL (Time To Live)</strong></li>
+                    <li>Objects are <strong>cached for the life of the TTL (Time To Live)</strong> - Default TTL is 24 hours, after which objects are cleared from the cache</li>
                     <li>We can <strong>clear cached objects at any time, but we will be charged</strong> for it</li>
-                    <li>Clear cache by <strong>invalidating objects</strong> - Something we might have to do if we cannot wait for the TTL (Time To Live) to expire</li>
+                    <li>^ Clear cache by <strong>invalidating objects</strong> - Something we might have to do if we cannot wait for the TTL (Time To Live) to expire</li>
                     <li>Geo-Restriction - Possible to whitelist/blacklist countries</li>
                 </ul>
             </div>
