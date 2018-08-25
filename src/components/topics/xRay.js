@@ -33,7 +33,7 @@ const XRay = () => {
                     <li>Elastic Load Balancing</li>
                     <li>Lambda</li>
                     <li>API Gateway</li>
-                    <li>(EC2) Elastic Compute Cloud</li>
+                    <li>Elastic Compute Cloud (EC2)</li>
                     <li>Elastic Beanstalk</li>
                 </ul>
             </div>

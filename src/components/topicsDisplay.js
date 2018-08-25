@@ -12,6 +12,7 @@ import Lambda from './topics/lambda.js';
 import APIGateway from './topics/apiGateway.js';
 import StepFunctions from './topics/stepFunctions.js';
 import XRay from './topics/xRay.js';
+import Serverless from './topics/serverless.js'
 import TopicsHome from './topics/topicsHome.js';
 
 import '../styles.css';
@@ -33,6 +34,7 @@ const TopicsDisplay = () => {
             <Route path='/apigateway' component={APIGateway}/>
             <Route path='/stepfunctions' component={StepFunctions}/>
             <Route path='/xray' component={XRay}/>
+            <Route path='/serverless' component={Serverless}/>
         </Switch>
     )
 }

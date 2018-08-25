@@ -52,7 +52,7 @@ class Navigation extends Component {
                     <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>CodeDeploy</NavLink>
                     <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>CodePipeline</NavLink>
                     <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>Developer Theory</NavLink>
-                    <NavLink className="navigation-items" to='/lambda' activeStyle={{color:'#ff9671'}}>Serverless</NavLink>
+                    <NavLink className="navigation-items" to='/serverless' activeStyle={{color:'#ff9671'}}>Serverless</NavLink>
                     {/* https://github.com/reactjs/react-router-tutorial/tree/master/lessons/05-active-links */}
                 </div>
             </div>
