@@ -16,10 +16,11 @@ const EC2 = () => {
             <div className="topics-flex-item-inline">
                 <h2>What is EC2?</h2>
                 <ul>
+                    <li><i>Elastic Compute Cloud</i></li>
                     <li>Web service providing resizeable compute capacity</li>
                     <li>Reduces time needed to obtain and boot new server instances to just minutes (as opposed to days)</li>
-                    <li>Allowing us to quickly scale capacity (up, down, and even <i>out</i> by virtue of adding additional instances) in response to changing requirements</li>
-                    <li>Changed <strong>economics</strong> of cloud computing</li>
+                    <li>Allowing us to <strong>quickly scale capacity</strong> (up, down, and even <i>out</i> by virtue of adding additional instances) in response to changing requirements</li>
+                    <li><strong>Changed economics</strong> of cloud computing</li>
                     <li>Only pay for capacity you <i>actually</i> use, no over-provisioning</li>
                 </ul>
             </div>

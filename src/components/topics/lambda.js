@@ -50,8 +50,8 @@ const Lambda = () => {
                     <li>Node.js</li>
                     <li>Java</li>
                     <li>Python</li>
-                    <li>C#</li>
                     <li>Go</li>
+                    <li>C#</li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">

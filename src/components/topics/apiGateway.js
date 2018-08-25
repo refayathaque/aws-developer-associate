@@ -88,6 +88,28 @@ const APIGateway = () => {
                     <li><i>Enable if your API has to interact with S3</i></li>
                 </ul>
             </div>
+            <div className="topics-flex-item-inline">
+                <h2>Import APIs</h2>
+                <ul>
+                    <li>Use <strong>API Gateway Import</strong> to import an API from an external defintion file into API Gateway</li>
+                    <li>^ Supports <strong>Swagger v2.0</strong> definition files</li>
+                    <li>We can either <strong>create a new API by submitting a POST</strong> request which includes a Swagger definition in the payload and endpoint configuration - Or we can <strong>update an existing API by using a PUT</strong> request that contains a Swagger definition in the payload</li>
+                    <li>We can <strong>update an API by overwriting it with a new definition, or by merging a definition with an existing API</strong></li>
+                    <li><i>Specify options using the mode query parameter in the request URL</i></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>API Throttling</h2>
+                <ul>
+                    <li>By default, API Gateway limits the steady-state request rate to <strong>10,000 requests per second (rps)</strong></li>
+                    <li>Maximum <strong>concurrent requests is 5000 requests across all APIs within an account</strong></li>
+                    <li>If we exceed 10,000 rps or 5000 concurrent requests we will get a <i>429 'Too Many Requests' error</i> response</li>
+                    <li><i>Examples:</i></li>
+                    <li>If a caller submits 10,000 requests in a one second period evenly (e.g., 10 requests every millisecond), API Gateway processes all requests without dropping any</li>
+                    <li>If the caller sends 10,000 requests in the first millisecond, API Gateway serves 5,000 of those requests and throttles the rest in the one-second period</li>
+                    <li>If the caller submits 5,000 requests in the first millisecond and then evenly spreads another 5,000 requests through the remaining 999 milliseconds (e.g., about 5 requests every millisecond), API Gateway processes all 10,000 requests in the one-second period without returning 429 errors</li>
+                </ul>
+            </div>
         </div>
     )
 

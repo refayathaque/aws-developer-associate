@@ -13,6 +13,7 @@ const XRay = () => {
             <div className="topics-flex-item-inline">
                 <h2>X-Ray</h2>
                 <ul>
+                    <li><i>One way of visualizing our serverless apps</i></li>
                     <li><strong>Collects data about requests your app serves</strong></li>
                     <li>Provides tools we can use to view, filter, and gain insights into ^ data to <strong>identify issues and opportunites for optimization</strong></li>
                     <li>For any traced request to our app, we can see detailed information not only about the request/response, but also about <i>calls our app makes downstream to other AWS resources, microservices, databases and HTTP web APIs</i></li>
@@ -32,17 +33,17 @@ const XRay = () => {
                     <li>Elastic Load Balancing</li>
                     <li>Lambda</li>
                     <li>API Gateway</li>
-                    <li>Elastic Compute Cloud</li>
+                    <li>(EC2) Elastic Compute Cloud</li>
                     <li>Elastic Beanstalk</li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
                 <h2>Languages</h2>
                 <ul>
-                    <li>Java</li>
-                    <li>Go</li>
                     <li>Node.js</li>
+                    <li>Java</li>
                     <li>Python</li>
+                    <li>Go</li>
                     <li>Ruby</li>
                     <li>.NET</li>
                 </ul>
