@@ -15,12 +15,12 @@ const Lambda = () => {
                     <li>Lambda takes care of provisioning and managing the servers that are being used to run our code</li>
                     <li>Do not have to worry about operating systems, patching, scaling, etc.</li>
                     <li>Lambda can be - <strong>Event driven</strong> compute service where it is run in response to events - E.g., change to data in S3 or DynamoDB table</li>
-                    <li>Lambda can be - Compute service in <strong>response to HTTP requests</strong> using APIGateway or through API calls from AWS SDKs</li>
+                    <li>Lambda can be - Compute service in <strong>response to HTTP requests</strong> using API Gateway or through API calls from AWS SDKs</li>
                     <li><i>Can also trigger other Lambda functions</i> - <strong>1 event can = x functions, if functions trigger other functions</strong> - E.g., an event can trigger one Lambda function which in turn triggers 3 other Lambda functions</li>
                     <li>Can interact with many other AWS services/resources, e.g., persisting data into a DynamoDB table</li>
                     <li><strong>Independent - 1 event = 1 function</strong></li>
                     <li>AWS classifies it as <strong>'compute service'</strong>'</li>
-                    <li>Is part of the <strong>'serverless'</strong> realm along with: <i>APIGateway, S3, DynamoDB</i> - RDS is not 'serverless'</li>
+                    <li>Is part of the <strong>'serverless'</strong> realm along with: <i>API Gateway, S3, DynamoDB</i> - RDS is not 'serverless'</li>
                     <li>Lambda architectures can get extremely complicated, use X-Ray to debug</li>
                     <li>Can do things <strong>globally</strong> (not stuck in one region) - E.g., we can use it to back up S3 buckets into other S3 buckets</li>
                 </ul>

@@ -10,6 +10,8 @@ import CloudFront from './topics/cloudFront.js';
 import Elasticache from './topics/elasticache.js';
 import Lambda from './topics/lambda.js';
 import APIGateway from './topics/apiGateway.js';
+import StepFunctions from './topics/stepFunctions.js';
+import XRay from './topics/xRay.js';
 import TopicsHome from './topics/topicsHome.js';
 
 import '../styles.css';
@@ -29,6 +31,8 @@ const TopicsDisplay = () => {
             <Route path='/cloudfront' component={CloudFront}/>
             <Route path='/lambda' component={Lambda}/>
             <Route path='/apigateway' component={APIGateway}/>
+            <Route path='/stepfunctions' component={StepFunctions}/>
+            <Route path='/xray' component={XRay}/>
         </Switch>
     )
 }

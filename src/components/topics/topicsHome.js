@@ -46,8 +46,14 @@ const TopicsHome = () => {
                 <h2>API Gateway</h2>
                 <h4><i>Publish/manage/monitor/secure APIs at any scale</i></h4>
             </div>
-            <div class="topicsHome-flex-item">4</div>
-            <div class="topicsHome-flex-item">5</div>
+            <div class="topicsHome-flex-item">
+                <h2>Step Functions</h2>
+                <h4><i>Visualize and test serverless apps</i></h4>
+            </div>
+            <div class="topicsHome-flex-item">
+                <h2>X-Ray</h2>
+                <h4>Analyze and debug production and distributed apps</h4>
+            </div>
             <div class="topicsHome-flex-item">6</div>
         </div>
     )
