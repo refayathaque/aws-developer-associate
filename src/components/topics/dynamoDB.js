@@ -67,6 +67,35 @@ const DynamoDB = () => {
                     <li>Fine grained access control using Condition parameter: <strong>dynamodb:LeadingKeys</strong> to allow users to access only the items where the partition key value matches their userID</li>
                 </ul>
             </div>
+            <div className="topics-flex-item-inline">
+                <h2>What is an Index?</h2>
+                <ul>
+                    <li>In SQL databases, an index is a data structure which allows us to perform <strong>fast queries on specific columns in a table</strong></li>
+                    <li>We select the columns we want to include in the index and then run searches on the index - As opposed to running searches on the entire dataset</li>
+                    <li>Enable fast queries on specific data columns</li>
+                    <li>Dynamo DB has 2 types of indexes to help speed up our queries: <strong>Local Secondary Index and Global Secondary Index</strong></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Local Secondary Index</h2>
+                <ul>
+                    <li>Can only be created when we create our table</li>
+                    <li>We <strong>cannot add/remove/modify the index later</strong></li>
+                    <li><strong>Same Partition Key</strong> as our table - But <strong>different sort key</strong></li>
+                    <li>Gives us a different view of the data, one that is organized by the alternative sort key</li>
+                    <li>Index queries based on this alternative sort key will be much faster than querying from the table</li>
+                    <li>E.g., Partition Key: userID, Sort Key: accountCreationDate</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Global Secondary Index</h2>
+                <ul>
+                    <li>Can create during or <strong>after</strong> table creation</li>
+                    <li><strong>Different Partition and Sort Keys</strong></li>
+                    <li>Gives us a different view of the data, one that is organized by the alternative sort key <i>and alternative parittion key</i></li>
+                    <li>E.g., Partition Key: emailAddress (as opposed to userID), Sort Key: lastLogInDate</li>
+                </ul>
+            </div>
         </div>
     )
 

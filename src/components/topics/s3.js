@@ -156,15 +156,6 @@ const S3 = () => {
             <div className="topics-flex-item-inline">
                 <h3>You are hosting a static website in an S3 bucket that uses Java script to reference assets in another S3 bucket. For some reason, these assets are not displaying when users browse to the site. What could be the problem?</h3>
                 <ul>
-                    <li></li>
-                    <li className="correct-answer"></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div className="topics-flex-item-inline">
-                <h3>You are hosting a static website in an S3 bucket that uses Java script to reference assets in another S3 bucket. For some reason, these assets are not displaying when users browse to the site. What could be the problem?</h3>
-                <ul>
                     <li><p>Amazon S3 does not support Javascript</p></li>
                     <li><p>You cannot use one S3 bucket to reference another S3 bucket</p></li>
                     <li className="correct-answer">You haven't enabled Cross Origin Resource Sharing (CORS) on the bucket where the assets are stored</li>
