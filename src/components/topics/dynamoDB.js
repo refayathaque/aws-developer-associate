@@ -96,6 +96,82 @@ const DynamoDB = () => {
                     <li>E.g., Partition Key: emailAddress (as opposed to userID), Sort Key: lastLogInDate</li>
                 </ul>
             </div>
+            <div className="topics-flex-item-inline">
+                <h2>Query</h2>
+                <ul>
+                    <li>Operation that finds items in a table based on the <strong>Primary Key attribute and a distinct value to search for</strong></li>
+                    <li>E.g., select an item where the <i>userID (Primary Key) is equal to 212</i> - Will select all the attributes for that item, e.g., first name, surname, email, etc. (i.e., will return the document/item/row)</li>
+                    <li>We can use an optional <i>Sort Key name and value to refine results</i></li>
+                    <li>^ E.g., if our Sort Key is a timestamp, we can refine the query to <strong>only select items with a timestamp issue in the last 7 days</strong></li>
+                    <li>By default, a query returns all the attributes for the items but we can use the <strong>ProjectionExpression</strong> parameter if we want the query to only return the specific attributes we want</li>
+                    <li>^ E.g., if we want to <i>only see the email address</i> rather than all the user's attributes</li>
+                    <li>Results are always sorted by the Sort Key</li>
+                    <li>Numeric order - by default in ascending order (1, 2, 3, 4)</li>
+                    <li>ASCII characters - by default in ascending order</li>
+                    <li>We can <strong>reverse the order by setting ScanIndexForward parameter to false</strong> - <i>Only applies to queries, not scans</i></li>
+                    <li>By default, queries are Eventually Consistent - But <strong>we can explicitly set queires to be Strongly Consistent</strong></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Scan</h2>
+                <ul>
+                    <li>Examines every item in the table</li>
+                    <li>By default, a scan returns all the attributes for the items but we can use the <strong>ProjectionExpression</strong> parameter if we want the query to only return the specific attributes we want</li>
+                    <li>Possible to filter results - <i>Filtering is not searching the database, it is first dumping the data (entire table), and then applying a filter on top of the data to show us only the results we are looking for</i></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Query or Scan?</h2>
+                <ul>
+                    <li><strong>Query is more efficient than scan</strong></li>
+                    <li>Scan dumps the entire table, then filters out the values to provide the desired result - <i>Removing the unwanted data is extra work</i></li>
+                    <li>As the table grows, the scan operation will take longer  and longer</li>
+                    <li>Scan operation on a large table <strong>can use up the provisioned throughput for a large table in just a single operation</strong></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Optimizing Performance</h2>
+                <ul>
+                    <li>We can reduce the impact of a query/scan by setting a smaller page size, which in turn will use fewer read operations - E.g., set the page size to return 40 items</li>
+                    <li><strong>Larger # of smaller operations will allow other requests to succeed without database throttling</strong></li>
+                    <li>Isolate scan operations to specific tables and segregate them from your mission-critical traffic</li>
+                    <li><i>Avoid using scan operations if you can</i> - Design tables so you only use query, Get, or BatchGetItem APIs</li>
+
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>How to Improve Scan Performance</h2>
+                <ul>
+                    <li>By default, a scan operation processes data sequentially, returning 1Mb increments before moving on to retrieve the next 1Mb of data - It can only scan one partition at a time</li>
+                    <li>We can configure DynamoDB to use <strong>Parallel scans</strong> instead, and we can do this by logically dividing a table or index into segments and scanning each segment in parallel</li>
+                    <li>However, it's best to avoid parallel scans if our table/index is already incurring heavy read/write workloads from other apps</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Provisioned Throughput</h2>
+                <ul>
+                    <li>Provisioned Throughput - Mechanism we use to <strong>define the capacity and performance requirements</strong></li>
+                    <li>Measured in <strong>Capacity Units (CU)</strong></li>
+                    <li>When you create your table, you specify your requirements in terms of Read and Write CUs</li>
+                    <li>1 x Write CU = 1 x 1Kb Writes per second</li>
+                    <li>1 x Read CU = 1 x 4Kb Strongly Consistent Reads per second</li>
+                    <li>1 x Read CU = <strong>2 x 4Kb</strong> Eventually Consistent Reads per second <strong>(Default)</strong></li>
+                    <li>E.g., table with 5 x Read CUs and 5 x Write CUs will be able to do - 20Kb per second of Strongly Consistent Reads (5 x 4Kb) - 40kb per second of Eventually Consistent Reads (5 x (2 x 4Kb)) - 5Kb per second of Writes (5 x 1Kb) - <i>Assuming each item is between 512 Bytes and 1Kb</i></li>
+                    <li><i>If your app reads or writes larger items it will consume more CUs and will cost you more as well</i></li>
+
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>CU Calculation Example</h2>
+                <ul>
+                    <li>Your app needs to read 80 items (table rows/documents) per second, each item is 3Kb in size, and you need Strongly Consistent Reads</li>
+                    <li>Step 1 - Calculate how many Read CUs you need given the size of the item - 3Kb/4Kb = 0.75 - <i>always round up</i> - <strong>Each read will need 1 Read CU</strong></li>
+                    <li>Multiply ^ by the required # of reads per second - 1 x 80 - <strong>80 Read CUs needed for the required operation</strong></li>
+                    <li>Similar calculation as ^ for Eventually Consistent Reads, but since <strong>1 x Read CU = 2 x 4Kb Eventually Consistent Reads per second</strong>, the final required CUs will be <strong>halved</strong> - <strong>40 Read CUs</strong> given the example above</li>
+                    <li>For Write CU calculation it is also similar to ^, with the only difference being that <i>1 x Write CU = 1 x 1Kb Writes per second - So for the above example it would be (3 x 80) <strong>240 CUs if we had to Write instead of Read</strong></i></li>
+                </ul>
+            </div>
+
         </div>
     )
 
