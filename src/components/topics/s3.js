@@ -163,7 +163,7 @@ const S3 = () => {
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
-                <h3></h3>
+                <h3>You are hosting a static website in an S3 bucket that uses Java script to reference assets in another S3 bucket. For some reason, these assets are not displaying when users browse to the site. What could be the problem?</h3>
                 <ul>
                     <li><p>Amazon S3 does not support Javascript</p></li>
                     <li><p>You cannot use one S3 bucket to reference another S3 bucket</p></li>

@@ -52,9 +52,12 @@ const TopicsHome = () => {
             </div>
             <div class="topicsHome-flex-item">
                 <h2>X-Ray</h2>
-                <h4>Analyze and debug production and distributed apps</h4>
+                <h4><i>Analyze and debug production and distributed apps</i></h4>
             </div>
-            <div class="topicsHome-flex-item">6</div>
+            <div class="topicsHome-flex-item">
+                <h2>DynamoDB</h2>
+                <h4><i>A Non-Relational SQL Database (NoSQL)</i></h4>
+            </div>
         </div>
     )
 }

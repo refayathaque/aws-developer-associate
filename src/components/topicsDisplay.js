@@ -13,6 +13,7 @@ import APIGateway from './topics/apiGateway.js';
 import StepFunctions from './topics/stepFunctions.js';
 import XRay from './topics/xRay.js';
 import Serverless from './topics/serverless.js'
+import DynamoDB from './topics/dynamoDB.js'
 import TopicsHome from './topics/topicsHome.js';
 
 import '../styles.css';
@@ -35,6 +36,7 @@ const TopicsDisplay = () => {
             <Route path='/stepfunctions' component={StepFunctions}/>
             <Route path='/xray' component={XRay}/>
             <Route path='/serverless' component={Serverless}/>
+            <Route path='/dynamodb' component={DynamoDB}/>
         </Switch>
     )
 }

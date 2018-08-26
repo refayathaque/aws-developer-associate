@@ -11,10 +11,10 @@ import '../styles.css';
 
 class Navigation extends Component {
 
-    constructor(props) {
-        super(props);
-        // this.onClick = this.onClick.bind(this);
-    }
+    // constructor(props) {
+    //     super(props);
+    //     // this.onClick = this.onClick.bind(this);
+    // }
 
     onClick = () => {
         console.log('hello world')
@@ -42,7 +42,7 @@ class Navigation extends Component {
                     <NavLink className="navigation-items" to='/apigateway' activeStyle={{color:'#ff9671'}}>APIGateway</NavLink>
                     <NavLink className="navigation-items" to='/stepfunctions' activeStyle={{color:'#ff9671'}}>Step Functions</NavLink>
                     <NavLink className="navigation-items" to='/xray' activeStyle={{color:'#ff9671'}}>X-Ray</NavLink>
-                    <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>DynamoDB</NavLink>
+                    <NavLink className="navigation-items" to='/dynamodb' activeStyle={{color:'#ff9671'}}>DynamoDB</NavLink>
                     <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>KMS</NavLink>
                     <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>SQS</NavLink>
                     <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>SNS</NavLink>
