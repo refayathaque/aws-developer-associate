@@ -167,11 +167,31 @@ const DynamoDB = () => {
                     <li>Your app needs to read 80 items (table rows/documents) per second, each item is 3Kb in size, and you need Strongly Consistent Reads</li>
                     <li>Step 1 - Calculate how many Read CUs you need given the size of the item - 3Kb/4Kb = 0.75 - <i>always round up</i> - <strong>Each read will need 1 Read CU</strong></li>
                     <li>Multiply ^ by the required # of reads per second - 1 x 80 - <strong>80 Read CUs needed for the required operation</strong></li>
-                    <li>Similar calculation as ^ for Eventually Consistent Reads, but since <strong>1 x Read CU = 2 x 4Kb Eventually Consistent Reads per second</strong>, the final required CUs will be <strong>halved</strong> - <strong>40 Read CUs</strong> given the example above</li>
+                    <li>Similar calculation as ^ for Eventually Consistent Reads, but since <strong>1 x Read CU = 2 x 4Kb Eventually Consistent Reads per second</strong>, the final required CUs will be <strong>halved</strong> - <strong>40 Read CUs would be needed </strong> given the example above</li>
                     <li>For Write CU calculation it is also similar to ^, with the only difference being that <i>1 x Write CU = 1 x 1Kb Writes per second - So for the above example it would be (3 x 80) <strong>240 CUs if we had to Write instead of Read</strong></i></li>
                 </ul>
             </div>
-
+            <div className="topics-flex-item-inline">
+                <h2>DAX</h2>
+                <ul>
+                    <li><i>DynamoDB Accelerator</i></li>
+                    <li>Fully managed, clustered <strong>in-memory cache</strong> for DynamoDB</li>
+                    <li>Delivers up to a 10x <strong>read</strong> performance improvement</li>
+                    <li>Microsecond performance for millions of requests per second</li>
+                    <li>Ideal for read-heavy and bursty read workloads</li>
+                    <li>E.g., auction applications, gaming and retail sites during Black Friday/Christmas promotions</li>
+                    <li>Write-through caching service - this means that the data is written to the cache as well as the back end store at the same time - <i>Any time the table is updated DAX is also updated</i></li>
+                    <li>Allows us to point the DynamoDB API calls at the DAX cluster - <i>Everytime our app tries to query DynamoDB, it will actually try and query the DAX cluster first</i> - If the item our app is querying is in the cache (there is a <strong>cache hit</strong>), DAX will return the result to our app</li>
+                    <li>You point your API calls at the DAX cluster, instead of your table</li>
+                    <li>^ If the item is not available in DAX (<strong>cache miss</strong>), DAX performs an <i>Eventually Consistent</i> GetItem operation against DynamoDB</li>
+                    <li>Retrieval of data from DAX reduces the read load on DynamoDB tables</li>
+                    <li>In some cases it is possible to use DAX and reduce the Provisioned Read Capacity to save on DynamoDB charges</li>
+                    <li><strong>Not suitable for apps requiring Strongly Consistent Reads</strong>, it is really only for <i>improving response times of Eventually Consistent Reads</i></li>
+                    <li>Not suitable for write intensive apps</li>
+                    <li>Not suitable for apps which do not perform many read operations</li>
+                    <li>Not suitable for apps which do not require microsecond response times</li>
+                </ul>
+            </div>
         </div>
     )
 
