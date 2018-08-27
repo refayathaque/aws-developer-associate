@@ -158,6 +158,7 @@ const DynamoDB = () => {
                     <li>1 x Read CU = <strong>2 x 4Kb</strong> Eventually Consistent Reads per second <strong>(Default)</strong></li>
                     <li>E.g., table with 5 x Read CUs and 5 x Write CUs will be able to do - 20Kb per second of Strongly Consistent Reads (5 x 4Kb) - 40kb per second of Eventually Consistent Reads (5 x (2 x 4Kb)) - 5Kb per second of Writes (5 x 1Kb) - <i>Assuming each item is between 512 Bytes and 1Kb</i></li>
                     <li><i>If your app reads or writes larger items it will consume more CUs and will cost you more as well</i></li>
+                    <li><strong>"ProvisionedThroughputExceededException"</strong> error means that we have <i>exceeded the maximum allowed provisioned throughput for a table or for one or more global secondary indexes</i></li>
 
                 </ul>
             </div>
@@ -175,7 +176,7 @@ const DynamoDB = () => {
                 <h2>DAX</h2>
                 <ul>
                     <li><i>DynamoDB Accelerator</i></li>
-                    <li>Fully managed, clustered <strong>in-memory cache</strong> for DynamoDB</li>
+                    <li>Fully managed, clustered <strong>in-memory write-through cache</strong> optimized for DynamoDB</li>
                     <li>Delivers up to a 10x <strong>read</strong> performance improvement</li>
                     <li>Microsecond performance for millions of requests per second</li>
                     <li>Ideal for read-heavy and bursty read workloads</li>
@@ -190,6 +191,169 @@ const DynamoDB = () => {
                     <li>Not suitable for write intensive apps</li>
                     <li>Not suitable for apps which do not perform many read operations</li>
                     <li>Not suitable for apps which do not require microsecond response times</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-block">
+                <h2>Quiz Questions</h2>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>You have a motion sensor which writes 600 items of data every minute. Each item consists of 5kb. What should you set the write throughput to?</h3>
+                <ul>
+                    <li className="correct-answer">50</li>
+                    <li>10</li>
+                    <li>20</li>
+                    <li>40</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>What is the API call to retrieve multiple items from a DynamoDB table?</h3>
+                <ul>
+                    <li>GetItems</li>
+                    <li>BatchGetItems</li>
+                    <li className="correct-answer">BatchGetItem</li>
+                    <li>BatchGet</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>In terms of performance, a scan is more efficient than a query.</h3>
+                <ul>
+                    <li className="correct-answer">False</li>
+                    <li>True</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>You have an application that needs to read 25 items of 13kb in size per second. Your application uses strongly consistent reads. What should you set the read throughput to?</h3>
+                <ul>
+                    <li>10</li>
+                    <li>25</li>
+                    <li>50</li>
+                    <li className="correct-answer">100</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>You have an application that needs to read 25 items of 13kb in size per second. Your application uses eventually consistent reads. What should you set the read throughput to?</h3>
+                <ul>
+                    <li>10</li>
+                    <li>25</li>
+                    <li>100</li>
+                    <li className="correct-answer">50</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Using the AWS portal, you are trying to Scale DynamoDB past its preconfigured maximums. Which service can you increase by raising a ticket to AWS support?</h3>
+                <ul>
+                    <li className="correct-answer">Provisioned throughput limits</li>
+                    <li>Item sizes</li>
+                    <li>Global Secondary Indexes</li>
+                    <li>Local Secondary Indexes</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which of the following attributes would make a good Partition Key?</h3>
+                <ul>
+                    <li>ProductType</li>
+                    <li>Size</li>
+                    <li>WarehouseLocation</li>
+                    <li className="correct-answer">ProductID</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which of the following attributes would make a good Sort Key?</h3>
+                <ul>
+                    <li className="correct-answer">InvoiceDate</li>
+                    <li>OrderNumber</li>
+                    <li>EmailAddress</li>
+                    <li>CustomerID</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Your application is storing customer order data in DynamoDB. Which of the following pairs of attributes would make the best composite key to allow you to query DynamoDB efficiently?</h3>
+                <ul>
+                    <li>CustomerID + ProductID</li>
+                    <li className="correct-answer">CustomerID + OrderDate</li>
+                    <li>CustomerID + ProductCategory</li>
+                    <li>CustomerID + Size</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Your application is storing customer order data in a DynamoDB table. You need to run a query to find all the orders placed by a specific customer in the last month, which attributes would you use in your query?</h3>
+                <ul>
+                    <li className="correct-answer">The Partition Key of CustomerID and a Sort Key of OrderDate</li>
+                    <li>The Partition Key of OrderDate and Sort Key of CustomerName</li>
+                    <li>A composite Primary Key made up of the CustomerName and OrderDate</li>
+                    <li>The Partition Key of OrderDate and a Sort Key of CustomerID</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>What is the difference between a Global Secondary Index and a Local Secondary Index</h3>
+                <ul>
+                    <li>You can create a Local Secondary Index at any time but you can only create a Global Secondary Index at table creation time</li>
+                    <li>You can delete a Global Secondary Index at any time</li>
+                    <li>You can delete a Local Secondary Index at any time</li>
+                    <li className="correct-answer">You can create a Global Secondary Index at any time but you can only create a Local Secondary Index at table creation time</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which of the following services provides in-memory write-through cache optimised for DynamoDB?</h3>
+                <ul>
+                    <li className="correct-answer">DAX</li>
+                    <li>Elasticache</li>
+                    <li>CloudFront</li>
+                    <li>Read-replica</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Your low latency web application needs to store its session state so that it can be accessed quickly. Which service do you recommend?</h3>
+                <ul>
+                    <li>In memory on your EC2 instance</li>
+                    <li>RDS</li>
+                    <li className="correct-answer">DynamoDB</li>
+                    <li>Elastic File Store</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>By default, a DynamoDB query operation is used for which of the following?</h3>
+                <ul>
+                    <li className="correct-answer"><p>Find items in a table based on the Primary Key attribute</p></li>
+                    <li>Return the entire contents of a table filtered on the Primary Key attribute</li>
+                    <li>Return the entire contents of a table</li>
+                    <li>Find items in a table based on the Sort Key attribute</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>In DynamoDB, a scan operation is used for which of the following?</h3>
+                <ul>
+                    <li>Return the entire contents of a table filtered on the Primary Key attribute</li>
+                    <li>Find items in a table based on the Primary Key attiribute</li>
+                    <li>Find items in a table based on the Sort Key attribute</li>
+                    <li className="correct-answer"><p>Return the entire contents of a table</p></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which of the following are recommended ways to optimise a query or scan in DynamoDB?</h3>
+                <ul>
+                    <li className="correct-answer"><p>Reduce the page size to return fewer items per results page</p></li>
+                    <li>Filter your results based on the Primary Key and Sort Key</li>
+                    <li>Set your queries to be eventually consistent</li>
+                    <li>Run parallel scans</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>You are running a query on your Customers table in DynamoBD, however you only want the query to return CustomerID and EmailAddress for each item in the table, how can you refine the query so that it only includes the required attributes?</h3>
+                <ul>
+                    <li>Create a Global Secondary Index which only includes the attributes you need and run the query on the Global Seconday Index</li>
+                    <li className="correct-answer">Use the ProjectionExpression parameter</li>
+                    <li>Run a query based on the Primary Key and filter the results using a Sort Key of EmailAddress</li>
+                    <li>Use a scan operation instead</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>What does the error "ProvisionedThroughputExceededException" mean in DynamoDB?</h3>
+                <ul>
+                    <li className="correct-answer">You exceeded your maximum allowed provisioned throughput for a table or for one or more global secondary indexes</li>
+                    <li>The DynamoDB table has exceeded the allocated space</li>
+                    <li>There is no such error message. The correct error message would be "ProvisionedThroughputFailureException"</li>
+                    <li>The DynamoDB table is unavailable</li>
                 </ul>
             </div>
         </div>
