@@ -1,24 +1,27 @@
 import React from 'react';
 import '../../styles.css';
 
-// import logo from "../../images/acloudguru.jpg"
+import logo from "../../images/Compute_ElasticLoadBalancing.jpg"
 
 const ELB = () => {
 
     return (
         <div className='topics-container'>
+            <div className="topics-flex-item-inline-logo">
+                <img src={logo} alt="Elastic Load Balancer Logo"></img>
+            </div>
             <div className="topics-flex-item-inline">
                 <h2>Types</h2>
                 <ul>
-                    <li>Application Load Balancer - Operates at OSI (Open Systems Interconnection) Layer 7 - Can see all the way up to the app layer and make very clever routing decisions based on incoming information</li>
-                    <li>Network Load Balancer - Operates at Layer 4 - For when we want super fast performance - Most expensive - We will use this if latency is an issue</li>
+                    <li>Application Load Balancer - <strong>Operates at OSI (Open Systems Interconnection) Layer 7</strong> - Can see all the way up to the app layer and make very clever routing decisions based on incoming information</li>
+                    <li>Network Load Balancer - <strong>Operates at Layer 4</strong> - For when we want super fast performance - Most expensive - We will use this if latency is an issue</li>
                     <li>Classic Load Balancer - Not recommended anymore, but remains as legacy service</li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
                 <h2>Application Load Balancer</h2>
                 <ul>
-                    <li>Best for load balancing of HTTP and HTTPS traffic</li>
+                    <li><strong>Best for load balancing of HTTP and HTTPS traffic</strong></li>
                     <li>Operates at Layer 7 and are <strong>application-aware</strong></li>
                     <li>Intelligent, we can create advanced request routing and have it send specific requests to specific web servers</li>
                     <li>Can be spread across multiple Availability Zones (AZs) to increase redundancies</li>
@@ -27,7 +30,7 @@ const ELB = () => {
             <div className="topics-flex-item-inline">
                 <h2>Network Load Balancer</h2>
                 <ul>
-                    <li>Best for load balancing of TCP (Transmission Control Protocol) traffic where <i>extreme performance</i> is neccesary</li>
+                    <li><strong>Best for load balancing of TCP (Transmission Control Protocol) traffic where extreme performance is neccesary</strong></li>
                     <li>Operates at Layer 4 (connection level)</li>
                     <li>Can handle <strong>millions of requests per second</strong>, while also maintianing ultra-low latencies</li>
                     <li>Most expensive out of the three</li>
@@ -36,7 +39,7 @@ const ELB = () => {
             <div className="topics-flex-item-inline">
                 <h2>Classic Load Balancer</h2>
                 <ul>
-                    <li><strong>Could be reffered to in exam as 'Elastic Load Balancer'</strong></li>
+                    <li><strong>Could be reffered to as 'Elastic Load Balancer'</strong></li>
                     <li><i>Legacy</i></li>
                     <li>Can load balance HTTP/HTTPS apps</li>
                     <li>Can use Layer 7-specific features like <strong>X-Forwarded</strong> and <strong>sticky sessions</strong></li>
@@ -58,16 +61,16 @@ const ELB = () => {
                     <li><i>Classic Load Balancers</i></li>
                     <li>When app users make a DNS request hitting our load balancer will take the request but will use a <strong>private IP (e.g., 10.0.0.23) address instead of the public IPv4 (e.g, 124.12.3.231) address of the app user</strong></li>
                     <li>The load balancer will then send the private IP address to the EC2 instance, and the EC2 instance will <i>only see the private IP address</i></li>
-                    <li>But we want to see where our user is! - So if we look in the X-Forwarded-For Header we can get our user's public IPv4 address</li>
+                    <li>But we want to see where our user is - So <strong>if we look in the X-Forwarded-For Header we can get our user's public IPv4 address</strong></li>
                 </ul>
             </div>
-            <div className="topics-flex-item-block">
+            <div className="topics-flex-item-inline">
                 <h2>Route53</h2>
                 <ul>
                     <li>DNS (Domain Name System) service</li>
-                    <li>Lets us <strong>map domains names</strong> to EC2/Load Balancers/S3</li>
+                    <li>Lets us <strong>map domains' names to EC2/Load Balancers/S3</strong></li>
                     <li>We can buy a domain name and connect it to any of the three different back-ends mentioned above</li>
-                    <li>Naked domain name: aws-certified-developer.com as opposed to www.aws-certified-developer.com</li>
+                    <li><i>Naked domain name: aws-certified-developer.com</i>, as opposed to www.aws-certified-developer.com</li>
                 </ul>
             </div>
         </div>

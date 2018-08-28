@@ -45,7 +45,7 @@ class Navigation extends Component {
                     <NavLink className="navigation-items" to='/dynamodb' activeStyle={{color:'#ff9671'}}>DynamoDB</NavLink>
                     <NavLink className="navigation-items" to='/kms' activeStyle={{color:'#ff9671'}}>KMS</NavLink>
                     <NavLink className="navigation-items" to='/sqs' activeStyle={{color:'#ff9671'}}>SQS</NavLink>
-                    <NavLink className="navigation-items" to='/sns' activeStyle={{color:'#ff9671'}}>SNS</NavLink>
+                    <NavLink className="navigation-items" to='/sns' activeStyle={{color:'#ff9671'}}>SNS/SES</NavLink>
                     <NavLink className="navigation-items" to='/elasticbeanstalk' activeStyle={{color:'#ff9671'}}>ElasticBeanstalk</NavLink>
                     <NavLink className="navigation-items" to='/kinesis' activeStyle={{color:'#ff9671'}}>Kinesis</NavLink>
                     <NavLink className="navigation-items" to='/kinesis' activeStyle={{color:'#ff9671'}}>CodeCommit</NavLink>
