@@ -15,6 +15,10 @@ import XRay from './topics/xRay.js';
 import Serverless from './topics/serverless.js'
 import DynamoDB from './topics/dynamoDB.js'
 import KMS from './topics/kms.js'
+import SNS from './topics/sns.js'
+import SQS from './topics/sqs.js'
+import Kinesis from './topics/kinesis.js'
+import ElasticBeanstalk from './topics/elasticbeanstalk.js'
 import TopicsHome from './topics/topicsHome.js';
 
 import '../styles.css';
@@ -39,6 +43,10 @@ const TopicsDisplay = () => {
             <Route path='/serverless' component={Serverless}/>
             <Route path='/dynamodb' component={DynamoDB}/>
             <Route path='/kms' component={KMS}/>
+            <Route path='/sns' component={SNS}/>
+            <Route path='/sqs' component={SQS}/>
+            <Route path='/kinesis' component={Kinesis}/>
+            <Route path='/elasticbeanstalk' component={ElasticBeanstalk}/>
         </Switch>
     )
 }
