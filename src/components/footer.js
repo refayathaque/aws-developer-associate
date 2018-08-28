@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <div className='footer-container'>
-            <h4>Made with &nbsp;
+            <h4>Made w/ &nbsp;
                 <FontAwesomeIcon icon={["far", "heart"]} />
                 &nbsp; using &nbsp;
                 <FontAwesomeIcon icon={["fab", "js"]} size="lg" />
@@ -17,7 +17,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={["fas", "cloud"]} />
                 &nbsp; with &nbsp;
                 <FontAwesomeIcon icon={["fab", "aws"]} size="lg" />
-                &nbsp; - &nbsp;Codebase in &nbsp;
+                &nbsp; - &nbsp;Codebase w/ &nbsp;
                 <a href="https://github.com/refayathaque/aws-developer-associate" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={["fab", "github"]} size="lg" />
                 </a>
