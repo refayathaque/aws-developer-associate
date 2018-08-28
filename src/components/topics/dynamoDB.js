@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles.css';
 
 import logo from "../../images/Database_AmazonDynamoDB.jpg"
+import logoDAX from "../../images/Database_AmazonDynamoDBAccelerator.jpg"
 
 const DynamoDB = () => {
 
@@ -192,6 +193,9 @@ const DynamoDB = () => {
                     <li>Not suitable for apps which do not perform many read operations</li>
                     <li>Not suitable for apps which do not require microsecond response times</li>
                 </ul>
+            </div>
+            <div className="topics-flex-item-inline-logo">
+                <img src={logoDAX} alt="DAX Logo"></img>
             </div>
             <div className="topics-flex-item-block">
                 <h2>Quiz Questions</h2>

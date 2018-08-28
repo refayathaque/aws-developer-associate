@@ -2,6 +2,8 @@ import React from 'react';
 import '../../styles.css';
 
 import logo from "../../images/Database_AmazonElasticCache.jpg"
+import logoMemcached from "../../images/Database_AmazonElasticCache_Memcached.jpg"
+import logoRedis from "../../images/Database_AmazonElasticCache_Redis.jpg"
 
 const Elasticache = () => {
 
@@ -53,6 +55,16 @@ const Elasticache = () => {
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
+                <h2>Exam Tips</h2>
+                <ul>
+                    <li>Scenario - Your database is under a lot of stress/load, so which service should be used to alleviate this problem?</li>
+                    <li>Answer 1 - <strong>Elasticache, if the database is particualrly read-heavy and not prone to frequent changes</strong></li>
+                    <li>Answer 2 - (<i>If question is related to data warehousing</i>) - Redshift, if the reason your database is stressed is due to the company's management frequently running OLAP transactions on it</li>
+                    <li>Memcached - When object caching is your primary goal, you want to keep things as simple as possible, you want to scale your cache horizonally (scale out)</li>
+                    <li>Redis - You have advanced data types like lists, hashes, and sets, you are doing data sorting and ranking (leaderboards), you need data persistence, you need Multi-AZ, and if you may need pub/sub capabilities</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
                 <h2>Redis</h2>
                 <ul>
                     <li>Due to replication and persistence features of Redis, Elasticache manages Redis more as a relational database</li>
@@ -64,6 +76,12 @@ const Elasticache = () => {
 
                 </ul>
             </div>
+            <div className="topics-flex-item-inline-logo">
+                <img src={logoRedis} alt="Redis Logo"></img>
+            </div>
+            <div className="topics-flex-item-inline-logo">
+                <img src={logoMemcached} alt="Memcached Logo"></img>
+            </div>
             <div className="topics-flex-item-inline">
                 <h2>Memcached</h2>
                 <ul>
@@ -71,20 +89,10 @@ const Elasticache = () => {
                     <li>Since Memcached is designed as a pure caching solution with no persistence, Elasticache manages Memcached nodes as a pool that can grow and shrink, similar to EC2 Auto Scaling Groups</li>
                     <li>Individual nodes are expendable, and Elasticache provides additional capabilities here, such as automatic node replacement and auto discovery</li>
                     <li><i>Use cases:</i></li>
-                    <li>If object caching is your primary goal, e.g, to offload your database</li>
+                    <li>If <strong>object caching is your primary goal, e.g, to offload your database</strong></li>
                     <li>Interested in <strong>as simple a caching model as possible</strong></li>
                     <li>Planning on running large cache nodes, and require multithreaded performance with utilization of multiple cores</li>
-                    <li>Ability to scale your cache horizontally (scale out) as your grow</li>
-                </ul>
-            </div>
-            <div className="topics-flex-item-inline">
-                <h2>Exam Tips</h2>
-                <ul>
-                    <li>Scenario - Database is under a lot of stress/load, so which service should be used to alleviate?</li>
-                    <li>Answer 1 - Elasticache, if the database is particualrly read-heavy and not prone to frequent changes</li>
-                    <li>Answer 2 - (<i>If question is related to data warehousing</i>) - Redshift, if the reason your database is stressed is due to the company management frequently running OLAP transactions on it</li>
-                    <li>Memcached - When object caching is your primary goal, you want to keep things as simple as possible, you want to scale your cache horizonally (scale out)</li>
-                    <li>Redis - You have advanced data types like lists, hashes, and sets, you are doing data sorting and ranking (leaderboards), you need data persistence, you need Multi-AZ, and if you may need pub/sub capabilities</li>
+                    <li><strong>Ability to scale your cache horizontally (scale out)</strong> as your grow</li>
                 </ul>
             </div>
         </div>
