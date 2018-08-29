@@ -31,9 +31,9 @@ const ElasticBeanstalk = () => {
                 <h2>Deployment Policies</h2>
                 <ul>
                     <li>Supports several options for processing deployments:</li>
-                    <li><i>All at once</i></li>
+                    <li><i>All at Once</i></li>
                     <li><i>Rolling</i></li>
-                    <li><i>Rolling with additional batch</i></li>
+                    <li><i>Rolling with Additional Batch</i></li>
                     <li><i>Immutable</i></li>
                 </ul>
             </div>
@@ -44,7 +44,7 @@ const ElasticBeanstalk = () => {
                     <li>All of our instances will be <strong>out of service while the deployment takes place</strong></li>
                     <li>We will experience an <strong>outage while the deployment is taking place - Not ideal for mission-critical production systems</strong></li>
                     <li>If the update fails, <i>we will need to roll back the changes by re-deploying the original version to all our instances</i></li>
-                    <li>Can do this in test and dev environemnts, but definitely not in your production environment unless your business is okay with having some downtime</li>
+                    <li>Can do this in test and dev environemnts, but definitely not in your production environment <i>unless your business is okay with having some downtime</i></li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
@@ -58,13 +58,32 @@ const ElasticBeanstalk = () => {
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
-                <h2>Rolling With Additional Batch Policy</h2>
+                <h2>Rolling with Additional Batch</h2>
                 <ul>
                     <li>Launches an <strong>additional batch of instances</strong></li>
                     <li>Deploys the new version in batches</li>
                     <li><strong>Maintains full capacity during deployment process</strong></li>
                     <li>If the update fails, we need to perform an additonal rolling update to roll back the changes</li>
-                    <li><strong>If the situation is performance senstive, we cannot have any downtime, and we have to maintain full capacity then we want this</strong></li>
+                    <li><strong>Ideal for when the situation is performance senstive, we cannot have any downtime, and we have to maintain full capacity</strong></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Immutable</h2>
+                <ul>
+                    <li><strong>Deploys the new version to a fresh group of instances in their own new autoscaling group</strong></li>
+                    <li>When the new instances pass their health checks, they are moved to our existing auto sclaing group; and finally, the old instances are terminated</li>
+                    <li><strong>Maintains full capacity during the deployment process</strong></li>
+                    <li><i>Impact of a failed update is far less</i>, and the rollback process requires only terminating the new auto scaling group</li>
+                    <li><strong>Preferred option for mission critical production systems</strong></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Deployment Polcies In a Nutshell</h2>
+                <ul>
+                    <li><strong>All at Once</strong> - <i>Service interruption while we update the entire environment at once</i> - <i>To roll back, perform a further 'All at Once' update</i></li>
+                    <li><strong>Rolling</strong> - <i>Reduced capacity during deployment (but no downtime)</i> - <i>To roll back, perform a further 'Rolling' update</i></li>
+                    <li><strong>Rolling with Additional Batch</strong> - <i>Maintains full capacity</i> - <i>To roll back, perform a further 'Rolling' update</i></li>
+                    <li><strong>Immutable</strong> - <i>Preferred option for mission critical production systems</i> - <i>Maintains full capacity</i> - <i>To roll back, delete the new instances and auto scaling group</i></li>
                 </ul>
             </div>
         </div>
