@@ -47,7 +47,7 @@ const SNS = () => {
             <div className="topics-flex-item-inline">
                 <h2>Benefits</h2>
                 <ul>
-                    <li><strong>Instantenous, push-based delivery (no polling)</strong></li>
+                    <li><strong>Instantaneous, push-based delivery (no polling)</strong></li>
                     <li>Simple APIs and easy integration with our apps</li>
                     <li><i>Flexible message deliver over mutiple transport protocols</i></li>
                     <li>Inexpensive, pay-as-you-go model with no up-front costs</li>
@@ -79,6 +79,48 @@ const SNS = () => {
                     <li><strong>Incoming emails can also be used to trigger Lambda functions and SNS notifications</strong></li>
                     <li><strong>For both incoming and outgoing email</strong></li>
                     <li>E.g., purchase confirmations, shipping notifications, order status updates, marketing communications, advertisements, newsletters, special offers</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-block">
+                <h2>Quiz Questions</h2>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>SNS is pull-based rather than push-based</h3>
+                <ul>
+                    <li>True</li>
+                    <li className="correct-answer">False</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>SNS messages cannot be customized by protocol type</h3>
+                <ul>
+                    <li className="correct-answer">False</li>
+                    <li>True</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>You have a list of email addresses to which you need to push emails on a periodic basis. What do you subscribe them to?</h3>
+                <ul>
+                    <li className="correct-answer">A topic</li>
+                    <li>A subreddit</li>
+                    <li>A subject</li>
+                    <li>A message</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which of these is a protocol NOT supported by SNS:</h3>
+                <ul>
+                    <li>HTTP</li>
+                    <li>Email</li>
+                    <li className="correct-answer">FTP (File Transfer Protocol)</li>
+                    <li>Email-JSON</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>You can use SNS in conjunction with SQS to fan a single message out to multiple SQS queues</h3>
+                <ul>
+                    <li className="correct-answer">True</li>
+                    <li>False</li>
                 </ul>
             </div>
         </div>
