@@ -27,6 +27,46 @@ const ElasticBeanstalk = () => {
                     <li>Intergrated with CloudWatch and X-Ray for performance data and metrics</li>
                 </ul>
             </div>
+            <div className="topics-flex-item-inline">
+                <h2>Deployment Policies</h2>
+                <ul>
+                    <li>Supports several options for processing deployments:</li>
+                    <li><i>All at once</i></li>
+                    <li><i>Rolling</i></li>
+                    <li><i>Rolling with additional batch</i></li>
+                    <li><i>Immutable</i></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>All At Once</h2>
+                <ul>
+                    <li>Deploys the new version to all instances simultaneously</li>
+                    <li>All of our instances will be <strong>out of service while the deployment takes place</strong></li>
+                    <li>We will experience an <strong>outage while the deployment is taking place - Not ideal for mission-critical production systems</strong></li>
+                    <li>If the update fails, <i>we will need to roll back the changes by re-deploying the original version to all our instances</i></li>
+                    <li>Can do this in test and dev environemnts, but definitely not in your production environment unless your business is okay with having some downtime</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Rolling</h2>
+                <ul>
+                    <li>Deploys the new version in <strong>batches</strong></li>
+                    <li><strong>Each batch of instances is taken out of service</strong> while the deployment takes place</li>
+                    <li>Our environment <strong>capacity will be reduced by the # of instances in a batch</strong> while the deployment takes place</li>
+                    <li><i>Not ideal for performance sensitive systems</i></li>
+                    <li>If the update fails, <i>we need to perform an additional rolling update to roll back the changes</i></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Rolling With Additional Batch Policy</h2>
+                <ul>
+                    <li>Launches an <strong>additional batch of instances</strong></li>
+                    <li>Deploys the new version in batches</li>
+                    <li><strong>Maintains full capacity during deployment process</strong></li>
+                    <li>If the update fails, we need to perform an additonal rolling update to roll back the changes</li>
+                    <li><strong>If the situation is performance senstive, we cannot have any downtime, and we have to maintain full capacity then we want this</strong></li>
+                </ul>
+            </div>
         </div>
     )
 
