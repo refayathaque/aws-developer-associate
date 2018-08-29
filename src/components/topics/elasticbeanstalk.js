@@ -86,6 +86,23 @@ const ElasticBeanstalk = () => {
                     <li><strong>Immutable</strong> - <i>Preferred option for mission critical production systems</i> - <i>Maintains full capacity</i> - <i>To roll back, delete the new instances and auto scaling group</i></li>
                 </ul>
             </div>
+            <div className="topics-flex-item-inline">
+                <h2>Configuring Elastic Beanstalk</h2>
+                <ul>
+                    <li>We can customize our Elastic Beanstalk environemnt using configuration files - <i>E.g., we can define packages to install, create Linux users and groups, run shell commands, specify services to enable or configure our load balancer, etc.</i></li>
+                    <li>Configuration files are written in YAML or JSON</li>
+                    <li>They may have a filename of our choice but <strong>must have a .config extensions and be saved inside a folder called .ebextensions</strong></li>
+                    <li>The ^ eb.extensions <strong>must be included in the top-level directory of the app source code</strong> - Meaning that the configuration files can be placed under source control along with the rest of the app code</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>RDS and Elastic Beanstalk</h2>
+                <ul>
+                    <li>Two different options for launching out RDS instance:</li>
+                    <li><strong>Launch within Elastic Beanstalk environment</strong> - <i>When we terminate the Elastic Beanstalk environment, the database will also be terminated</i> - Quick and easy to add your database and get started - <strong>Only suitable for dev and test environments</strong></li>
+                    <li><strong>Launch outside of Elastic Beanstalk</strong> - Decouple the RDS instance from our Elastic Beanstalk environment - <strong>Additional configuration steps required: Security Group (we have to add an additional Security Group to our environment's auto scaling group) and Connection (we have to provide connection string configuration information, e.g., endpoint and password, to the app servers that are using Elastic Beanstalk environment properties) information</strong> - <strong>Suitable for production environments</strong> - More flexibility - <i>Allows connection from multiple environments, provides a wider choice of database types, and allows us to tear down the app stack without impacting the database</i></li>
+                </ul>
+            </div>
         </div>
     )
 
