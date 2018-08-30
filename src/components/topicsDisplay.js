@@ -19,6 +19,10 @@ import SNS from './topics/sns.js'
 import SQS from './topics/sqs.js'
 import Kinesis from './topics/kinesis.js'
 import ElasticBeanstalk from './topics/elasticbeanstalk.js'
+import CodeCommit from './topics/codeCommit.js'
+import CodeDeploy from './topics/codeDeploy.js'
+import CodePipeline from './topics/codePipeline.js'
+import DeveloperTheory from './topics/developerTheory.js'
 import TopicsHome from './topics/topicsHome.js';
 
 import '../styles.css';
@@ -28,6 +32,10 @@ const TopicsDisplay = () => {
     return (
         <Switch>
             <Route exact path='/' component={TopicsHome}/>
+            <Route exact path='/codecommit' component={CodeCommit}/>
+            <Route exact path='/codedeploy' component={CodeDeploy}/>
+            <Route exact path='/codepipeline' component={CodePipeline}/>
+            <Route exact path='/developertheory' component={DeveloperTheory}/>
             <Route path='/iam' component={IAM}/>
             <Route path='/ec2' component={EC2}/>
             <Route path='/acloudguru' component={ACloudGuru}/>

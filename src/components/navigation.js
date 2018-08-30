@@ -48,10 +48,10 @@ class Navigation extends Component {
                     <NavLink className="navigation-items" to='/sns' activeStyle={{color:'#ff9671'}}>SNS/SES</NavLink>
                     <NavLink className="navigation-items" to='/elasticbeanstalk' activeStyle={{color:'#ff9671'}}>Elastic Beanstalk</NavLink>
                     <NavLink className="navigation-items" to='/kinesis' activeStyle={{color:'#ff9671'}}>Kinesis</NavLink>
-                    <NavLink className="navigation-items" to='/kinesis' activeStyle={{color:'#ff9671'}}>CodeCommit</NavLink>
-                    <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>CodeDeploy</NavLink>
-                    <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>CodePipeline</NavLink>
-                    <NavLink className="navigation-items" to='/ec2' activeStyle={{color:'#ff9671'}}>Developer Theory</NavLink>
+                    <NavLink className="navigation-items" to='/codecommit' activeStyle={{color:'#ff9671'}}>CodeCommit</NavLink>
+                    <NavLink className="navigation-items" to='/codedeploy' activeStyle={{color:'#ff9671'}}>CodeDeploy</NavLink>
+                    <NavLink className="navigation-items" to='/codepipeline' activeStyle={{color:'#ff9671'}}>CodePipeline</NavLink>
+                    <NavLink className="navigation-items" to='/developertheory' activeStyle={{color:'#ff9671'}}>Developer Theory</NavLink>
                     <NavLink className="navigation-items" to='/serverless' activeStyle={{color:'#ff9671'}}>Serverless</NavLink>
                     {/* https://github.com/reactjs/react-router-tutorial/tree/master/lessons/05-active-links */}
                 </div>
