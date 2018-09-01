@@ -57,6 +57,121 @@ const DeveloperTheory = () => {
                     <li>CodePipeline - CI/CD workflow tool, fully automates the entire release process (build, test, deployment)</li>
                 </ul>
             </div>
+            <div className="topics-flex-item-inline">
+                <h2>CodeBuild</h2>
+                <ul>
+                    <li>CodeBuild is a fully managed build service - Can build source code, run tests and product software packages based on commands that we define ourselves</li>
+                    <li>By default, the <strong>buildspec.yml</strong> defines the build commands and settings used by CodeBuild to run our build</li>
+                    <li>We can completely override the settings in the buildspec.yml by adding our own commands in the console when launching the build</li>
+                    <li>If our build fails, we should check the build logs in the CodeBuild console and we can also view the full CodeBuild log in CloudWatch</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Docker and CodeBuild</h2>
+                <ul>
+                    <li>Docker allows us to package up our software into <strong>containers</strong> which we can run in ECS (Elastic Container Service)</li>
+                    <li>A Docker container includes everything the software needs to run including code, libraries, runtime and environment variables, etc.</li>
+                    <li>We use a special file called a <strong>Dockerfile</strong> to specify the instructions needed to assemble our Docker image</li>
+                    <li>Once built, Docker images can be store in <strong>ECR (Elastic Container Registry)</strong> and ECS can then use the image to launch Docker containers</li>
+                    <li>There are specific Docker commands to build, tag (apply an alias), and push our Docker image to the ECR repository</li>
+                    <li><i>docker build -r myimagerepo .</i></li>
+                    <li><i>docker tag myimagerepo:latest 532537857293.dkr.ecr.eu-central-1.amazonaws.com/myimagerepo:latest</i></li>
+                    <li><i>docker push 534095243095.dkr.ecr.eu-central-1.amazonaws.com/myimagerepo:latest</i></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-block">
+                <h2>Quiz Questions</h2>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which of the following practices allows multiple developers working on the same application to merge code changes frequently, without impacting each other and enables the identification of bugs early on in the release process?</h3>
+                <ul>
+                    <li>Continuous Deployment</li>
+                    <li className="correct-answer">Continuous Integration</li>
+                    <li>Continuous Delivery</li>
+                    <li>Continous Development</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which AWS service can be used to compile source code, run tests and package code?</h3>
+                <ul>
+                    <li>CodeDeploy</li>
+                    <li>CodeCommit</li>
+                    <li>CodePipeline</li>
+                    <li className="correct-answer">CodeBuild</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>When deploying application code to EC2, the AppSpec file can be written in which language?</h3>
+                <ul>
+                    <li className="correct-answer">YAML</li>
+                    <li>JSON or YAML</li>
+                    <li>XML</li>
+                    <li>JSON</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which AWS service can be used automatically install your application code onto EC2, on premises systems and Lambda?</h3>
+                <ul>
+                    <li className="correct-answer">CodeDeploy</li>
+                    <li>CodeCommit</li>
+                    <li>CodeBuild</li>
+                    <li>X-Ray</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>You are deploying an application to to a number of EC2 instances using CodeDeploy. What is the name of the used to specify source files and lifecycle hooks?</h3>
+                <ul>
+                    <li className="correct-answer">appspec.yml</li>
+                    <li>buildspec.json</li>
+                    <li>appspec.json</li>
+                    <li>buildspec.yml</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which AWS service can be used to centrally store and version control your application source code, binaries and libraries?</h3>
+                <ul>
+                    <li>ElasticFileSystem</li>
+                    <li className="correct-answer">CodeCommit</li>
+                    <li>CodeBuild</li>
+                    <li>CodePipeline</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>You want to recieve an email whenever a user pushes code to your CodeCommit repository, how can you configure this?</h3>
+                <ul>
+                    <li>Configure a CloudWatch Events rule to send a message to SQS which will trigger an email to be sent whenever a user pushes code to the repository</li>
+                    <li>Configure a CloudWatch Events rule to send a message to SES which will trigger an email to be sent whenever a user pushes code to the repository</li>
+                    <li>Create a new SNS topic and configure it to poll for CodeCommit events. Ask all your users subscribe to the topic to recieve notifications</li>
+                    <li className="correct-answer">Configure Notifications in the console, this will create a CloudWatch Events rule to send a notification to an SNS topic which will trigger an email to be sent to the user</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>When deploying application code to Lambda, the AppSpec file can be written in YAML and what other format?</h3>
+                <ul>
+                    <li className="correct-answer">JSON</li>
+                    <li>Python</li>
+                    <li>YAML</li>
+                    <li>XML</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>In the CodeDeploy AppSpec file, what are hooks used for?</h3>
+                <ul>
+                    <li>Hooks are reserved for future use</li>
+                    <li>To specify files that you want to copy during the deployment</li>
+                    <li className="correct-answer">To specify code, scripts or functions that you want to run at set points in the deployment lifecycle</li>
+                    <li>To reference AWS resources that will be used during the deployment</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which AWS service can be used to fully automate your entire release process?</h3>
+                <ul>
+                    <li>CodeDeploy</li>
+                    <li>CodeCommit</li>
+                    <li className="correct-answer">CodePipeline</li>
+                    <li>CodeBuild</li>
+                </ul>
+            </div>
         </div>
     )
 

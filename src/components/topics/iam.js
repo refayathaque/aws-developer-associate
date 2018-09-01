@@ -46,6 +46,33 @@ const IAM = () => {
                     <li>We should set up and customize password rotation policies for all users</li>
                 </ul>
             </div>
+            <div className="topics-flex-item-inline">
+                <h2>Web Identity Federation</h2>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Cognito User Pools</h2>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h2>Inline vs. Managed vs. Custom Policies</h2>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
             <div className="topics-flex-item-block">
                 <h2>Quiz Questions</h2>
             </div>
