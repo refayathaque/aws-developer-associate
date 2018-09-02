@@ -49,28 +49,20 @@ const IAM = () => {
             <div className="topics-flex-item-inline">
                 <h2>Web Identity Federation</h2>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Federation allows users to authenticate with a Web Identity Provider (Google, Facebook, Amazon)</li>
+                    <li>The user authenticates first with the web identity provider and receives an authentication token, which is then exchanged for temporary AWS credentials allowing the user to assume an IAM role</li>
+                    <li>Cognito is an identity broker that handles interaction between your app and the web identity provider - Provides sign-up, sign-in, and guest user access - Syncs user data for a seamless experience across your devices - <strong>Cognito is the AWS recommended approach for Web Identity Federation, particularly for mobile apps</strong></li>
+                    <li>Cognito uses <strong>User Pools</strong> to manage user sign-up and sign-in directly or via Web Identity Providers</li>
+                    <li>Cognito uses <strong>Push Synchronization to send a silent push notification via SNS of user data updates to multiple device types associated with a user ID</strong></li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline">
-                <h2>Cognito User Pools</h2>
+                <h2>Inline vs. Managed vs. Customer Managed Policies</h2>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div className="topics-flex-item-inline">
-                <h2>Inline vs. Managed vs. Custom Policies</h2>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Managed Policy - AWS-managed default polcies - We cannot change the permissions defined - E.g., <i>AmazonDynamoDBFullAccess or AmazonEC2ReadOnlyAccess</i></li>
+                    <li>Customer Managed Policy - Managed by us - Can be used only within our account - Can copy an existing AWS Managed Policy and customize it to fit our requirements</li>
+                    <li>Inline Policy - Managed by us and embedded within a single user, group, or role - <strong>Strict 1:1 relationship between the entity and policy - When the user/group/role in which the policy is embedded is deleted, the policy itself will also be deleted</strong></li>
+                    <li><i>In most cases, AWS recommends using Managed Policies over Inline Policies</i></li>
                 </ul>
             </div>
             <div className="topics-flex-item-block">
