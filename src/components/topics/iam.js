@@ -60,7 +60,7 @@ const IAM = () => {
                 <h2>Inline vs. Managed vs. Customer Managed Policies</h2>
                 <ul>
                     <li>Managed Policy - AWS-managed default polcies - We cannot change the permissions defined - E.g., <i>AmazonDynamoDBFullAccess or AmazonEC2ReadOnlyAccess</i></li>
-                    <li>Customer Managed Policy - Managed by us - Can be used only within our account - Can copy an existing AWS Managed Policy and customize it to fit our requirements</li>
+                    <li>Customer Managed Policy - Managed by us - <strong>Can be used only within our account</strong> - Can copy an existing AWS Managed Policy and customize it to fit our requirements</li>
                     <li>Inline Policy - Managed by us and embedded within a single user, group, or role - <strong>Strict 1:1 relationship between the entity and policy - When the user/group/role in which the policy is embedded is deleted, the policy itself will also be deleted</strong></li>
                     <li><i>In most cases, AWS recommends using Managed Policies over Inline Policies</i></li>
                 </ul>
@@ -131,6 +131,33 @@ const IAM = () => {
                     <li className="correct-answer">Allows us to manage users/groups/roles and their corresponding level of access to all AWS resources/services</li>
                     <li>Allows us to manage permissions for <i>resources only</i></li>
                     <li>Allows us to manage <i>users' passwords only</i>, AWS personnel must create new users for your company through a ticketing system</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>What does Cognito use to create unique identities for users and authenticate them with web identity providers?</h3>
+                <ul>
+                    <li>User Pools</li>
+                    <li className="correct-answer">Identity Pools</li>
+                    <li>IAM Groups</li>
+                    <li>IAM Users</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which of the following correctly describes a Customer Managed Policy?</h3>
+                <ul>
+                    <li>It is managed by you</li>
+                    <li>It is created and administered by AWS</li>
+                    <li>The policy will be deleted if you delete the user, group or role it is associated with</li>
+                    <li className="correct-answer">It can be assigned to multiple users, groups or roles in your account</li>
+                </ul>
+            </div>
+            <div className="topics-flex-item-inline">
+                <h3>Which of the following applies to an AWS Managed Policy?</h3>
+                <ul>
+                    <li className="correct-answer">It can only be assigned to a single user, group or role  in your account</li>
+                    <li>It can be assigned to multiple users, groups or roles</li>
+                    <li>You can change the default permissions defined in the policy</li>
+                    <li>It is available for use by any AWS account</li>
                 </ul>
             </div>
             <div className="topics-flex-item-inline-logo">
